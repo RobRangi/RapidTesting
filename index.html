@@ -19,7 +19,7 @@
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
 
-    <body>
+    <body class="clearfix">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -38,14 +38,14 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a class="brand" href="#">LOGO</a>
+                        <a class="brand" href="#/home"><img src="img/logo.png" /></a>
 
-                        <!-- Use the Angular MenuController to sync the header/footer menus -->
+                        <!-- Use the Angular menuController to sync the header/footer menus -->
                         <div class="nav-collapse collapse">
-                            <ul class="nav pull-right" data-ng-controller="MenuController">
+                            <ul class="nav pull-right" data-ng-controller="menuController">
                                 <li data-ng-repeat="item in menuItems"
                                 data-ng-class="(item.menuRoute == location.path() && 'active')">
-                                    <a href="#{{ item.menuRoute }}"><i class="{{ item.menuIcon }}"></i> {{ item.menuName }}</a>
+                                    <a href="#{{ item.menuRoute }}"><!-- <i class="{{ item.menuIcon }}"></i> -->{{ item.menuName }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +57,7 @@
 
         <!-- BEGIN: Content View
         ================================================== -->
-        <div data-ng-view=""></div>
+        <div class="clearfix" data-ng-view=""></div>
         <!-- END: Content View -->
 
         <!-- BEGIN: Footer
@@ -66,8 +66,8 @@
             <div class="container">
                 <div class="row">
 
-                    <!-- Use the Angular MenuController to sync the header/footer menus -->
-                    <div class="text-center" data-ng-controller="MenuController" >
+                    <!-- Use the Angular menuController to sync the header/footer menus -->
+                    <div class="text-center" data-ng-controller="menuController" >
                         <a class="btn btn-link"
                             data-toggle="tooltip" title="{{ item.menuName }}"
                             data-ng-repeat="item in menuItems"
@@ -93,22 +93,24 @@
         <script src="js/vendor/angular.min.js"></script>
 
         <script type="text/javascript">
+            'use strict';
+
             var appRapid = angular.module('appRapid', []);
 
             appRapid.config(function ($routeProvider) {
                 $routeProvider
-                    .when('/home', { controller: 'SimpleController', templateUrl: 'htm/home.htm'})
-                    .when('/services', { controller: 'SimpleController', templateUrl: 'htm/services.htm'})
-                    .when('/courses', { controller: 'SimpleController', templateUrl: 'htm/courses.htm'})
-                    .when('/media', { controller: 'SimpleController', templateUrl: 'htm/media.htm'})
-                    .when('/blog', { controller: 'SimpleController', templateUrl: 'htm/blog.htm'})
-                    .when('/contact', { controller: 'SimpleController', templateUrl: 'htm/contact.htm'})
+                    .when('/home', { controller: 'simpleController', templateUrl: 'htm/home.htm'})
+                    .when('/services', { controller: 'simpleController', templateUrl: 'htm/services.htm'})
+                    .when('/courses', { controller: 'simpleController', templateUrl: 'htm/courses.htm'})
+                    .when('/media', { controller: 'simpleController', templateUrl: 'htm/media.htm'})
+                    .when('/blog', { controller: 'feedController', templateUrl: 'htm/blog.htm'})
+                    .when('/contact', { controller: 'simpleController', templateUrl: 'htm/contact.htm'})
                     .otherwise({ redirectTo: '/home' });
             });
 
             var controllers = {};
 
-            controllers.MenuController = function ($scope, $location) {
+            controllers.menuController = function ($scope, $location) {
                 $scope.location = $location;
                 $scope.menuItems = [
                     {menuRoute: '/home', menuIcon: 'icon-home', menuName: 'Home'},
@@ -120,9 +122,25 @@
                 ];
             };
 
-            controllers.SimpleController = function ($scope) {};
+            controllers.simpleController = function ($scope) {};
 
             appRapid.controller(controllers);
+
+            appRapid.controller("feedController", ['$scope','feedFactory', function ($scope,Feed) {
+                $scope.loadFeed=function(e){
+                    Feed.parseFeed("http://bjosman.wordpress.com/feed/").then(function(res){
+                        $scope.feeds=res.data.responseData.feed.entries;
+                    });
+                }
+            }]);
+
+            appRapid.factory('feedFactory',['$http', function($http) {
+                return {
+                    parseFeed : function(url) {
+                        return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+                    }
+                }
+            }]);
         </script>
 
         <!-- Google Analytics -->
