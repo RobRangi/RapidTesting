@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
 
@@ -27,28 +29,25 @@
 
         <!-- BEGIN: Sticky Header
         ================================================== -->
-        <div class="navbar-wrapper">
-            <div class="container">
-                <div class="navbar navbar-inverse">
-                    <div class="navbar-inner">
+        <div class="navbar-wrapper container">
+            <div class="navbar">
+                <div class="navbar-inner">
 
-                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-                        <a class="brand" href="#/home"><img src="img/logo.png" /></a>
+                    <a class="brand" href="#/home"><img src="img/logo.png" /></a>
 
-                        <!-- Use the Angular menuController to sync the header/footer menus -->
-                        <div class="nav-collapse collapse">
-                            <ul class="nav pull-right" data-ng-controller="menuController">
-                                <li data-ng-repeat="item in menuItems"
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right" data-ng-controller="menuController">
+                            <li data-ng-repeat="item in menuItems"
                                 data-ng-class="(item.menuRoute == location.path() && 'active')">
-                                    <a href="#{{ item.menuRoute }}"><!-- <i class="{{ item.menuIcon }}"></i> -->{{ item.menuName }}</a>
-                                </li>
-                            </ul>
-                        </div>
+                                <a href="#{{ item.menuRoute }}">{{ item.menuName }}</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -63,19 +62,12 @@
         <!-- BEGIN: Footer
         ================================================== -->
         <footer>
-            <div class="container">
-                <div class="row">
-
-                    <!-- Use the Angular menuController to sync the header/footer menus -->
-                    <div class="text-center" data-ng-controller="menuController" >
-                        <a class="btn btn-link"
-                            data-toggle="tooltip" title="{{ item.menuName }}"
-                            data-ng-repeat="item in menuItems"
-                            data-ng-class="(item.menuRoute == location.path() && 'active')"
-                            href="#{{ item.menuRoute }}"><i class="{{ item.menuIcon }}"></i></a>
-                    </div>
-
-                </div>
+            <div class="text-center" data-ng-controller="menuController" >
+                <a class="btn btn-link"
+                    data-toggle="tooltip" title="{{ item.menuName }}"
+                    data-ng-repeat="item in menuItems"
+                    data-ng-class="(item.menuRoute == location.path() && 'active')"
+                    href="#{{ item.menuRoute }}"><img ng-src="{{ item.menuIcon }}"></i></a>
             </div>
         </footer>
         <!-- END: Footer -->
@@ -97,9 +89,11 @@
 
             var appRapid = angular.module('appRapid', []);
 
+            // Router config for views
+            // ==================================================
             appRapid.config(function ($routeProvider) {
                 $routeProvider
-                    .when('/home', { controller: 'simpleController', templateUrl: 'htm/home.htm'})
+                    .when('/home', { controller: 'carouselController', templateUrl: 'htm/home.htm'})
                     .when('/services', { controller: 'simpleController', templateUrl: 'htm/services.htm'})
                     .when('/courses', { controller: 'simpleController', templateUrl: 'htm/courses.htm'})
                     .when('/media', { controller: 'simpleController', templateUrl: 'htm/media.htm'})
@@ -108,39 +102,42 @@
                     .otherwise({ redirectTo: '/home' });
             });
 
+            // Controller/Model Definition
+            // ==================================================
             var controllers = {};
 
+            // Dummy model for views that do not require data
+            controllers.simpleController = function ($scope) {};
+
+            // Menu model
             controllers.menuController = function ($scope, $location) {
                 $scope.location = $location;
                 $scope.menuItems = [
-                    {menuRoute: '/home', menuIcon: 'icon-home', menuName: 'Home'},
-                    {menuRoute: '/services', menuIcon: 'icon-cog', menuName: 'Services'},
-                    {menuRoute: '/courses', menuIcon: 'icon-user', menuName: 'Courses'},
-                    {menuRoute: '/media', menuIcon: 'icon-camera', menuName: 'Media'},
-                    {menuRoute: '/blog', menuIcon: 'icon-book', menuName: 'Blog'},
-                    {menuRoute: '/contact', menuIcon: 'icon-envelope', menuName: 'Contact'}
+                    {menuRoute: '/home', menuIcon: 'img/shop.svg', menuName: 'Home'},
+                    {menuRoute: '/services', menuIcon: 'img/lab.svg', menuName: 'Services'},
+                    {menuRoute: '/courses', menuIcon: 'img/study.svg', menuName: 'Courses'},
+                    {menuRoute: '/media', menuIcon: 'img/photo.svg', menuName: 'Media'},
+                    {menuRoute: '/blog', menuIcon: 'img/news.svg', menuName: 'Blog'},
+                    {menuRoute: '/contact', menuIcon: 'img/mail.svg', menuName: 'Contact'}
                 ];
             };
 
-            controllers.simpleController = function ($scope) {};
+            // Carousel model
+            controllers.carouselController = function ($scope) {
+                $scope.carouselItems = [
+                    {   carouselImage: 'img/caro1.jpg', carouselHeading: 'Test Consultancy',
+                        carouselText: 'Rapid can show you how to develop organisational test policies and enterprise test strategies that fit with the way you deliver your projects and take into account your tolerance for business risk.',
+                        carouselLink: '/services', carouselLinkText: 'Sign up today', },
+                    {   carouselImage: 'img/caro2.jpg', carouselHeading: 'Test Management',
+                        carouselText: 'Our Test Managers are experienced in industry best practices and can implement test frameworks that are structured, efficient and relevant. They bring vast levels of experience and extensive market knowledge to your projects.',
+                        carouselLink: '/courses', carouselLinkText: 'Learn More', },
+                    {   carouselImage: 'img/caro3.jpg', carouselHeading: 'Test Training',
+                        carouselText: 'Rapid works collaboratively with your own staff and are able to bring our world-class test capabilityto ensure you realise the benefits of adopting a testing culture in your organisation.',
+                        carouselLink: '/media', carouselLinkText: 'Browse Gallery', }
+                ];
+            };
 
             appRapid.controller(controllers);
-
-            appRapid.controller("feedController", ['$scope','feedFactory', function ($scope,Feed) {
-                $scope.loadFeed=function(e){
-                    Feed.parseFeed("http://bjosman.wordpress.com/feed/").then(function(res){
-                        $scope.feeds=res.data.responseData.feed.entries;
-                    });
-                }
-            }]);
-
-            appRapid.factory('feedFactory',['$http', function($http) {
-                return {
-                    parseFeed : function(url) {
-                        return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-                    }
-                }
-            }]);
         </script>
 
         <!-- Google Analytics -->
