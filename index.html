@@ -67,14 +67,13 @@
         <footer>
             <div class="container">
                 <div class="row">
-
                     <!-- Use the Angular menuController to sync the header/footer menus -->
                     <div class="text-center" data-ng-controller="menuController" >
                         <a class="btn btn-link"
                             data-toggle="tooltip" title="{{ item.menuName }}"
                             data-ng-repeat="item in menuItems"
                             data-ng-class="(item.menuRoute == location.path() && 'active')"
-                            href="#{{ item.menuRoute }}"><i class="{{ item.menuIcon }}"></i></a>
+                            href="#{{ item.menuRoute }}"><!-- <i class="{{ item.menuIcon }}"></i> -->{{ item.menuName }}</a>
                     </div>
 
                 </div>
