@@ -1,0 +1,28 @@
+<header id="head">
+    <div class="container-fluid">
+        <div class="navbar">
+            <div class="navbar-inner">
+
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="brand" href="#/home">
+                <img src="img/logo.png" width="90" height="90" alt="Rapid logo">
+                <span class="head-logo-title">Rapid<strong>Testing</strong></span>
+                <span class="head-logo-subtitle">Testing is what we do</span>
+            </a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right" data-ng-controller="menuController">
+                    <li data-ng-repeat="item in menuItems"
+                        data-ng-class="(item.menuRoute == location.path() && 'active')">
+                            <a href="#{{ item.menuRoute }}">{{ item.menuName }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

@@ -12,223 +12,43 @@
         <meta name="description" content="Rapid Testing - Software Testing | Test Management | Test Training">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-        <!-- <link rel="stylesheet" href="css/bootstrap-responsive.css"> -->
-        <!-- <link rel="stylesheet" href="css/main.css"> -->
-        <link rel="stylesheet" href="css/newmain.css">
+        <link rel="stylesheet" href="css/site-bootstrap-restart.css">
+        <link rel="stylesheet" href="css/site-responsive.css">
+        <link rel="stylesheet" href="css/site-main.css">
 
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
         <script src="js/vendor/modernizr.custom.js"></script>
 
-        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu:400,700' rel='stylesheet' type='text/css'>
     </head>
 
-    <body class="clearfix">
+    <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-
-        <!-- BEGIN: Sticky Header
+        <!-- Header
         ================================================== -->
-        <header>
-            <div class="container">
-                <div class="navbar">
-                    <div class="navbar-inner">
+        <div data-ng-include="'../htm/site-header.htm'"></div>
 
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <a class="brand" href="#/home">
-                        <img src="img/logo.png" width="90" height="90" alt="Rapid logo">
-                        <span class="logo_title">Rapid<strong>Testing</strong></span>
-                        <span class="logo_subtitle">Testing is what we do</span>
-                    </a>
-
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right" data-ng-controller="menuController">
-                            <li data-ng-repeat="item in menuItems"
-                                data-ng-class="(item.menuRoute == location.path() && 'active')">
-                                    <a href="#{{ item.menuRoute }}"><!-- <i class="{{ item.menuIcon }}"></i> -->{{ item.menuName }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- END: Sticky Header -->
-
-        <!-- BEGIN: Content View
+        <!-- Content View
         ================================================== -->
         <div data-ng-view=""></div>
-        <!-- END: Content View -->
 
-        <!-- BEGIN: Footer
+        <!-- Footer
         ================================================== -->
-        <footer>
-            <section id="twitter_feed_wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="span1 twitter_feed_icon">
-                            <a href="#twitter"></a>
-                        </div>
-                        <div class="span11">
-                            <blockquote>
-                                <p>
-                                    Latest Twitter Post here
-                                </p>— Link Me and Post date here</a>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="footer_teasers_wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="span4 footer_teaser">
-                            <h3>
-                                About us
-                            </h3>
-                            <p>
-                                RAP!D Testing is a Software Testing Consultancy and Training company based in Wellington, New Zealand.
-                            </p>
-                            <p>
-                                1122 Boogie Boogie Avenus
-                            </p>
-                            <p>
-                                (+64) YRGO4RAPID
-                            </p>
-                            <p>
-                                (+64) 21GO4RAPID
-                            </p>
-                            <p>
-                                inqueries@rapidtesting.co.nz
-                            </p>
-                        </div>
-                        <div class="span4 footer_teaser">
-                            <h3>
-                                Latest News
-                            </h3>
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a href="#/media" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>FEB</span></a>
-                                    <h5 class="media-heading">
-                                        <a href="#">Media heading, this is a title of a news...</a>
-                                    </h5>
-                                    <p>
-                                        Fugiat dapibus, tellus ac cursus commodo, ut fermentum...
-                                    </p>
-                                </li>
-                                <li class="media">
-                                    <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>FEB</span></a>
-                                    <h5 class="media-heading">
-                                        <a href="#">Media heading, of a news item.</a>
-                                    </h5>
-                                    <p>
-                                        Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="span4 footer_teaser" id="latest-flickr-images">
-                            <h3>
-                                FlickrFeed
-                            </h3>
-                            <p>
-                                All photos © by Duckface & Selfie.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="span4">
-                            Copyright ©2013 all rights reserved
-                        </div>
-                        <div class="span4" data-ng-controller="menuController" >
-                            <a class="btn btn-link"
-                                data-toggle="tooltip" title="{{ item.menuName }}"
-                                data-ng-repeat="item in menuItems"
-                                data-ng-class="(item.menuRoute == location.path() && 'active')"
-                                href="#{{ item.menuRoute }}"><i class="{{ item.menuIcon }}"></i></a>
-                        </div>
-                        <div class="span4 text-right">
-                            Hacked by the Legend
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </footer>
-        <!-- END: Footer -->
+        <div data-ng-include="'../htm/site-footer.htm'"></div>
 
         <!-- Scripts
         ================================================== -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
-        <!-- Angular Scripts -->
+        <!-- Angular -->
         <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/ui-bootstrap-tpls-0.4.0.min.js"></script>
+        <script src="js/modelcontroller.js"></script>
 
-        <script type="text/javascript">
-            'use strict';
-
-            var appRapid = angular.module('appRapid', []);
-
-            appRapid.config(function ($routeProvider) {
-                $routeProvider
-                    .when('/home', { controller: 'simpleController', templateUrl: 'htm/home.htm'})
-                    .when('/services', { controller: 'simpleController', templateUrl: 'htm/services.htm'})
-                    .when('/courses', { controller: 'simpleController', templateUrl: 'htm/courses.htm'})
-                    .when('/media', { controller: 'simpleController', templateUrl: 'htm/media.htm'})
-                    .when('/blog', { controller: 'feedController', templateUrl: 'htm/blog.htm'})
-                    .when('/contact', { controller: 'simpleController', templateUrl: 'htm/contact.htm'})
-                    .otherwise({ redirectTo: '/home' });
-            });
-
-            var controllers = {};
-
-            controllers.menuController = function ($scope, $location) {
-                $scope.location = $location;
-                $scope.menuItems = [
-                    {menuRoute: '/home', menuIcon: 'icon-home', menuName: 'Home'},
-                    {menuRoute: '/services', menuIcon: 'icon-cog', menuName: 'Services'},
-                    {menuRoute: '/courses', menuIcon: 'icon-user', menuName: 'Courses'},
-                    {menuRoute: '/media', menuIcon: 'icon-camera', menuName: 'Media'},
-                    {menuRoute: '/blog', menuIcon: 'icon-book', menuName: 'Blog'},
-                    {menuRoute: '/contact', menuIcon: 'icon-envelope', menuName: 'Contact'}
-                ];
-            };
-
-            controllers.simpleController = function ($scope) {};
-
-            appRapid.controller(controllers);
-
-            appRapid.controller("feedController", ['$scope','feedFactory', function ($scope,Feed) {
-                $scope.loadFeed=function(e){
-                    Feed.parseFeed("http://bjosman.wordpress.com/feed/").then(function(res){
-                        $scope.feeds=res.data.responseData.feed.entries;
-                    });
-                }
-            }]);
-
-            appRapid.factory('feedFactory',['$http', function($http) {
-                return {
-                    parseFeed : function(url) {
-                        return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-                    }
-                }
-            }]);
-        </script>
-
-        <!-- Featurette Scroller Engine -->
+        <!-- Scroller Engine -->
         <script src="js/vendor/classie.js"></script>
         <script src="js/vendor/cbpScroller.js"></script>
 

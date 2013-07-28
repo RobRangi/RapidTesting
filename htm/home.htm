@@ -1,39 +1,39 @@
-<div class="main-container container-fluid">
-    <div class="container" id="intro"> 
-        <div class="offset3 span6 glaze">
-            <h1>We are passionate about all kinds of Testing!</h1>
-            <p>Let Rapid Testing help you exeed the quality requirements of your next project. Click the button below to contact us with your Testing needs.</p>
-            <a href="#/contact" class="btn btn-xlarge btn-purple">Contact RAP!D</a>
+<!-- ==================================================
+
+Viewname    : Home
+RouterName  : /home
+Controller  : pitchController 
+Purpose     : Attraction mode for the Landing Page
+
+================================================== -->
+<section id="home" class="text-center">
+
+    <!-- home-intro display initial panorama and text -->
+    <section id="home-intro" class="container-fluid">
+        <div class="container">
+            <div class="offset2 span8 home-intro-text">
+                <h1>Ready to help.<br />We are Testing Professionals.</h1>
+                <p>Let Rapid Testing help you exeed the quality requirements of your next project. Click the button below to contact us with your Testing needs.</p>
+                <a class="btn btn-large btn-info" href="#/contact">Contact RAP!D</a>
+            </div>
         </div>
-    </div>
-</div>
-<div class="container-fluid" id="about">
-    <div class="container text-center">
-        <h1 class="h1-offer">What can we offer</h1>
-        <ul class="thumbnails">
-            <li class="span4">
-                <div class="thumbnail">
-                  <img src="img/seotips_circle.svg" width="50%">
-                  <h3>Consultancy</h3>
-                  <p>Rapid can show you how to develop organisational test policies and enterprise test strategies that fit with the way you deliver your projects today.</p>
-                </div>
-            </li>
+    </section>
 
-            <li class="span4">
-                <div class="thumbnail">
-                  <img src="img/pagequality_circle.svg" width="50%">
-                  <h3>Test Management</h3>
-                  <p>Our Test Managers are experienced in industry best practices and can implement test frameworks that are structured, efficient and relevant. They bring vast levels of experience and extensive market knowledge to your projects.</p>
-                </div>
-            </li>
+    <!-- home-pitch displays the three marketing pitchs  -->
+    <section id="home-pitch" class="container-fluid">
+        <div class="container">
+            <h1 class="home-pitch-h1">What can we offer</h1>
+            <ul class="thumbnails">
+                <li class="span4" data-ng-repeat="item in pitchItems" >
+                    <div class="thumbnail">
+                        <img ng-src="{{ item.pitchIcon }}" width="50%">
+                        <h3>{{ item.pitchName }}</h3>
+                        <p>{{ item.pitchText }}</p>
+                        <a class="btn btn-info" href="{{ item.pitchLink }}">Learn more</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-            <li class="span4">
-                <div class="thumbnail">
-                   <img src="img/targetaudience_circle.svg" width="50%">
-                  <h3>Training</h3>
-                  <p>Rapid works collaboratively with your own staff and are able to bring our world-class test capability ensuring you realise the benefits of adopting a testing culture in your organisation.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+</section>

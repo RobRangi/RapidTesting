@@ -1,75 +1,22 @@
-<div class="container">
-	<dl>
-		<dt>Agile Testing</dt>
-		<dd>
-			<p>Agile development methods have become increasingly popular over the last few years. It radically changes the approach to the software development lifecycle, but where does it leave the tester? [2 day course]<br /><br />This course focuses on:-</p>
-			<ul>
-				<li>An introduction to agile and what is agile?</li>
-				<li>Testing in an agile context</li>
-				<li>How to adapt to agile</li>
-				<li>Test planning in an agile context</li>
-				<li>Test analysis and design in an agile context</li>
-				<li>Stories, acceptance criteria and how testing deals with these</li>
-			</ul>
-		</dd>
+<section id="courses" class="courses-section">
+	<div class="container courses-header-text">
+        <div class="offset2 span8">
+            <h1>Engage. Enlighten. Empower</h1>
 
-    	<dt>Exploratory Testing</dt>
-    	<dd>
-	        <p>Exploratory Testing is a focused introduction to effective, practical exploratory testing.This is a hands on course that uses various heuristics and approaches to help testers become better testers. [1 day course]<br /><br />
-	        This course focuses on:-</p>
-			<ul>
-				<li>Lean approach to software testing</li>
-				<li>Understanding and using heuristics and oracles</li>
-				<li>How bias affects our test effort</li>
-				<li>Using maps and tours</li>
-				<li>Becoming more effective at software testing</li>
-				<li>Strategies</li>
-				<li>Becoming a better skilled tester</li>
-			</ul>
-		</dd>
+            <p class="lead">Let Rapid fulfil your training needs. Click below to select a course.</p>
+        </div>
+	</div>
+	<div class="container">
+		<accordion close-others="true">
+			<accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+				<h4 class="courses-h4">Duration: {{ group.duration }}</h4>
+				<p class="lead">{{group.content}}</p>
 
-    	<dt>Exploratory Test Management</dt>
-    	<dd>
-	        <p>Exploratory Test Management teaches testers how to apply an effective management framework over the top of your exploratory testing using session and thread based test management. [1 day course]<br /><br />
-	        This course focuses on:-</p>
-			<ul>
-				<li>Lean test management</li>
-				<li>Using mind-maps</li>
-				<li>Session based test management including the use of charters</li>
-				<li>Deriving reporting metrics to help tell the testing story</li>
-				<li>Thread based test management</li>
-				<li>How to tell an effective testing story</li>
-			</ul>
-		</dd>
-
-    	<dt>Fundamental Software Testing</dt>
-    	<dd>
-	        <p>Fundamental Software Testing focuses on building the thinking and questioning skills of a tester. We show how to take a critical approach to testing with an emphasis on structured exploratory testing using a mixture of lecture, hands on learning games, socratic questioning and the use of different media.[2 day course]<br /><br />
-	        This course focuses on:-</p>
-			<ul>
-				<li>What is testing?</li>
-				<li>What are the different software development life-cycles and how testing fits in</li>
-				<li>Agile - what is it , what can we learn from it and how does testing fit?</li>
-				<li>Test analysis and design</li>
-				<li>Test approaches</li>
-				<li>Test management</li>
-			</ul>
-		</dd>
-
-    	<dt>Test Leadership</dt>
-    	<dd>
-	        <p>Test Leadership course helps the aspiring test leaders, test managers or test directors understand the principles of leadership, ethics, motivation as well as practical test management. [1 day course]<br /><br />
-	        This course focuses on:-</p>
-			<ul>
-				<li>What is leadership?</li>
-				<li>Principles and types of leadership</li>
-				<li>Ethics</li>
-				<li>Motivating test teams</li>
-				<li>Test management and how to become a leader</li>
-				<li>Coaching and mentoring</li>
-				<li>Building teams</li>
-				<li>Building communities</li>
-			</ul>
-		</dd>
-	</dl>
-</div>
+				<ul data-ng-repeat="objective in group.objectives">
+					<li>{{ objective }}</li>
+				</ul>
+				
+			</accordion-group>
+		</accordion>
+	</div>
+</section>

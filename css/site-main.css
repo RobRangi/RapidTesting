@@ -1,0 +1,197 @@
+/* ============================================================
+    Custom generic selectors for project
+============================================================ */
+.divider {
+  margin: 5em 0;
+}
+
+/* ============================================================
+    Custom tags for courses.htm
+============================================================ */
+.courses-section {
+  padding: 3em;
+}
+.courses-header-text{
+  background-color: #bdc3c7;
+  color:#fff;
+  text-align: center;
+}
+
+/* Accordion style */
+.accordion-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.accordion-heading {
+  cursor: pointer;
+  background-color: #ecf0f1;
+} 
+
+.accordion-heading a:hover,
+.accordion-heading a:visited {
+  background-color: #16a085;
+  color:#fff;   
+}
+
+.accordion-inner {
+  background-color: #1abc9c;
+  color:#ecf0f1;    
+  padding:1.5em 2em;
+}
+.accordion-group a {
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.accordion-inner li {
+  font-size: 1.3125em;
+  font-weight: 300;
+}
+
+.courses-h3 {
+  font-weight: normal;  
+}
+.courses-h4 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  padding-bottom: 1em;
+}
+
+
+/* ============================================================
+    Custom tags for services.htm
+============================================================ */
+
+/* Scroller
+------------------------- */
+.cbp-so-scroller {
+  margin-top: 3em;
+  overflow: hidden;
+}
+
+/* Clear floats of children */
+.cbp-so-section:before,
+.cbp-so-section:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-so-section:after {
+  clear: both;
+}
+
+/* Text styling */
+.cbp-so-section ul li {
+  line-height: 1.428571em;
+}
+
+/* Sides */
+.cbp-so-side {
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 1em 2%;
+  overflow: hidden;
+  min-height: 12em;
+
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  -o-transition: -moz-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Clear floats of children */
+.cbp-so-side:before,
+.cbp-so-side:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-so-side:after {
+  clear: both;
+}
+
+.cbp-so-side-right {
+  text-align: left;
+}
+
+.cbp-so-side-left {
+  text-align: right;
+}
+
+.cbp-so-side-right img {
+  float: left;
+}
+
+.cbp-so-side-left img {
+  float: right;
+}
+
+/* Initial state (hidden or anything else) */
+.cbp-so-init .cbp-so-side {
+  opacity: 0;
+}
+
+.cbp-so-init .cbp-so-side-left {
+  -webkit-transform: translateX(-20em);
+  -moz-transform: translateX(-20em);
+  -ms-transform: translateX(-20em);
+  -o-transform: translateX(-20em);
+  transform: translateX(-20em);
+}
+
+.cbp-so-init .cbp-so-side-right {
+  -webkit-transform: translateX(20em);
+  -moz-transform: translateX(20em);
+  -ms-transform: translateX(20em);
+  -o-transform: translateX(20em);
+  transform: translateX(20em);
+}
+
+/* Animated state */
+/* add you final states (transition) or your effects (animations) for each side */
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+/* ============================================================
+    Custom tags for home.htm
+============================================================ */
+
+#home-intro {
+  background: url('../img/caroslim.jpg') #000 top no-repeat;
+  min-height: 25em;
+}
+.home-intro-text{
+  color:#fff;
+  margin-top:5.375em;
+}
+.home-intro-text p {
+  padding:1em 0;
+}
+.home-pitch-h1 {
+  margin:0.78048em;
+}
+
+/*override bootstrap setting*/
+.thumbnail {
+  border:0;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
