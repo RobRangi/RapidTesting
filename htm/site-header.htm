@@ -1,27 +1,36 @@
-<header id="head">
+<header id="header" data-ng-controller="menuController">
     <div class="container-fluid">
-        <div class="navbar">
-            <div class="navbar-inner">
-
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="brand" href="#/home">
-                <img src="img/logo.png" width="90" height="90" alt="Rapid logo">
-                <span class="head-logo-title">Rapid<strong>Testing</strong></span>
-                <span class="head-logo-subtitle">Testing is what we do</span>
-            </a>
-
-            <div class="nav-collapse collapse">
-                <ul class="nav pull-right" data-ng-controller="menuController">
-                    <li data-ng-repeat="item in menuItems"
-                        data-ng-class="(item.menuRoute == location.path() && 'active')">
-                            <a href="#{{ item.menuRoute }}">{{ item.menuName }}</a>
-                    </li>
-                </ul>
+        <div class="container">
+            <h1>
+                <a href="index.html"><img src="img/logo.png" alt="RapidTesting"></a>
+            </h1>
+            <form id="search" action="search.php" method="get">
+                <input type="text" name="s"> <a onclick="document.getElementById('search').submit()" class=""></a>
+                <div class="clear"></div>
+            </form>
+            <div class="clear"></div>
+            <div class="hdr-menu">
+                <nav class>
+                    <ul class="hdr-menubar" >
+                        <li data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() && ' active')">
+                            <a href="#{{item.menuRoute}}">{{ item.menuName }}</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="hdr-caro-wallpaper" data-ng-show="(location.path() == '/home')"> 
+        <div class="container-fluid">
+            <div class="container">
+                <div class="hdr-caro-text">
+                    <ul class="hdr-carousel">
+                        <li>
+                            <span>Ready to Help</span> We are Test Professionals
+                        </li>
+                    </ul>
+                </div><a href="#" class="prev"></a><a href="#" class="next"></a>
             </div>
         </div>
     </div>

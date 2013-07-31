@@ -1,0 +1,84 @@
+<!-- ==================================================
+
+Viewname    : Home
+RouterName  : /home
+Controller  : pitchController 
+Purpose     : Attraction mode for the Landing Page
+
+================================================== -->
+<section class="view-home">
+   <div class="hme-pitch-block">
+      <div class="container-fluid">
+         <div class="container" data-ng-controller="pitchController">
+            <div class="span4" data-ng-repeat="item in pitchItems">
+               <div class="hme-pitch-box">
+                  <div class="title">
+                     {{item.pitchName}}
+                  </div>
+                  <div class="inner1">
+                     <img ng-src="{{item.pitchIcon}}" alt="">
+                     <h3>
+                        {{item.pitchQuote}}
+                     </h3>
+                     <div class="clear"></div>
+                     {{ item.pitchText}}<br>
+                     <a href="{{item.pitchLink}}" class="btn">Details</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>  
+   <div class="content page1">
+      <div class="container-fluid">
+         <div class="container">
+            <img src="img/page1_img4.jpg" alt="" class="img-inner fleft">
+            <div class="extra_wrapper">
+               <h2>
+                  Our Services
+               </h2>
+               <div class="text1">
+                  <a href="#">Achieve Product Quality through testing</a>
+               </div>
+               <p>Rapid Testing is a company dedicated to helping companies to get more out of their testing services.  We align with the Context Driven approach to testing and with this in mind we provide the following services to enable this:-<p>
+               <ul class="list2">
+                  <li>Providing testing courses to mentor and up-skill your testers to be critical thinkers, better problem solvers and to think outside the square and to add greater value. Too many companies see testers as "button pushers", however by looking at testing as more than proving specifications, we can help testers provide information that managers need (whether it is good or bad).</li>
+                  <li>Provision of test consultancy services to evaluate your testing approach, strategies and teams</li>
+                  <li>Provision of testers for engagements that are more than bodies for projects - they provide value</li>
+                  <li>Provision of test coaching, mentoring and development for small companies with limited numbers of testers to help build excellent test teams</li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="hor_separator"></div>
+          
+            <div class="span4">
+               <h3 class="head1">
+                  Selling Point
+               </h3>
+               <div class="text1 tx1">
+               Vivamus scelerisque augue nec arcu egestas aliquet.
+               </div>Mes cuml dia sed in lacus ut eniascet etor ing aliiqt es sitet amet eismod ictorut ligulate ameti dapi licdu nt mtsent lusto dolor ltisim com.<br>
+               <a href="#" class="btn">Details</a>
+            </div>
+            <div class="span4">
+               <h3 class="head1">
+                  Selling Point
+               </h3>
+               <div class="text1 tx1">
+               Vivamus scelerisque augue nec arcu egestas aliquet.
+               </div>Mes cuml dia sed in lacus ut eniascet etor ing aliiqt es sitet amet eismod ictorut ligulate ameti dapi licdu nt mtsent lusto dolor ltisim com.<br>
+               <a href="#" class="btn">Details</a>
+            </div>
+            <div class="span4">
+               <h3 class="head1">
+                  Selling Point
+               </h3>
+               <div class="text1 tx1">
+               Vivamus scelerisque augue nec arcu egestas aliquet.
+               </div>Mes cuml dia sed in lacus ut eniascet etor ing aliiqt es sitet amet eismod ictorut ligulate ameti dapi licdu nt mtsent lusto dolor ltisim com.<br>
+               <a href="#" class="btn">Details</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

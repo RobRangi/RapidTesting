@@ -1,0 +1,18 @@
+<div class="content">
+	<div class="container-fluid">
+		<div class="container">
+			<h3>
+				Our Courses
+			</h3>
+			<accordion close-others="true">
+				<accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+					<h4>Course: {{ group.title}} >>	Duration: {{ group.duration }}</h4>
+					{{group.content}}
+					<ul data-ng-repeat="objective in group.objectives">
+						<li>{{ objective }}</li>
+					</ul>
+				</accordion-group>
+			</accordion>
+		</div>
+	</div>
+</div>

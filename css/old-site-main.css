@@ -4,6 +4,53 @@
 .divider {
   margin: 5em 0;
 }
+.bgWhite {
+  background-color: #fff;  
+}
+/* ============================================================
+    Custom tags for home.htm
+============================================================ */
+.home-intro {
+  background: url('../img/caroslim.jpg') #fff center center no-repeat;
+  min-height: 30em;
+  color:#fff;
+}
+.home-intro-text{
+  margin-top:6.928571425em;
+}
+.home-intro-text p {
+  padding:1em 0;
+}
+/*override bootstrap setting*/
+.home-services,
+.home-pitch {
+  margin-top:2em;
+  margin-bottom: 2em;
+}
+.box {
+  background-color: #ecf0f1;
+}
+.box-title {
+  padding: 0.666666666em 1.1em 0.666666666em;
+  background-color: rgba(189, 195, 199,1.0);
+  color: #fff;
+  font-size: 2em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.box img {
+  float: left;
+  margin: 1em;
+  vertical-align: top;
+  max-width: 100%;
+}
+.box-details {
+  padding:1em;
+}
+.box-clear {
+  float: none !important;
+  clear: both;
+}
 
 /* ============================================================
     Custom tags for courses.htm
@@ -168,30 +215,3 @@
   opacity: 1;
 }
 
-/* ============================================================
-    Custom tags for home.htm
-============================================================ */
-
-#home-intro {
-  background: url('../img/caroslim.jpg') #000 top no-repeat;
-  min-height: 25em;
-}
-.home-intro-text{
-  color:#fff;
-  margin-top:5.375em;
-}
-.home-intro-text p {
-  padding:1em 0;
-}
-.home-pitch-h1 {
-  margin:0.78048em;
-}
-
-/*override bootstrap setting*/
-.thumbnail {
-  border:0;
-  -moz-box-shadow:none;
-  -o-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-}

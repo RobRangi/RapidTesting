@@ -1,88 +1,15 @@
 <footer>
-    <section id="twitter_feed_wrapper">
+    <div class="container_fluid">
         <div class="container">
-            <div class="row">
-                <div class="span1 twitter_feed_icon">
-                    <a href="#twitter"></a>
-                </div>
-
-                <div class="span11">
-                    <blockquote>
-                        <p>Latest Twitter Post here</p>— Link Me and Post date here
-                    </blockquote>
-                </div>
+            <div class="ft-social">
+                <a href="#"><img src="img/fb.png" alt=""></a>
+                <a href="#"><img src="img/rss.png" alt=""></a>
+                <a href="#"><img src="img/twitter.png" alt=""></a>
+                <a href="#"><img src="img/g_plus.png" alt=""></a>
+            </div>
+            <div class="ft-legal">
+                Rapid<span>Testing</span> © 2013
             </div>
         </div>
-    </section>
-
-    <section id="footer_teasers_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="span4 footer_teaser">
-                    <h3>About us</h3>
-
-                    <p>RAP!D Testing is a Software Testing Consultancy and Training company based in Wellington,
-                    New Zealand.</p>
-
-                    <p>1122 Boogie Boogie Avenus</p>
-
-                    <p>(+64) YRGO4RAPID</p>
-
-                    <p>(+64) 21GO4RAPID</p>
-
-                    <p>inqueries@rapidtesting.co.nz</p>
-                </div>
-
-                <div class="span4 footer_teaser">
-                    <h3>Latest News</h3>
-
-                    <ul class="media-list">
-                        <li class="media">
-                            <a class="media-photo" href="#/media" style=
-                            "background-image:url(img/consult.svg)"></a> <a class="media-date" href=
-                            "#">19<span>FEB</span></a>
-
-                            <h5 class="media-heading"><a href="#">Media heading, this is a title of a
-                            news...</a></h5>
-
-                            <p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>
-                        </li>
-
-                        <li class="media">
-                            <a class="media-photo" href="#" style=
-                            "background-image:url(img/consult.svg)"></a> <a class="media-date" href=
-                            "#">18<span>FEB</span></a>
-
-                            <h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>
-
-                            <p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="span4 footer_teaser" id="latest-flickr-images">
-                    <h3>Website</h3>
-
-                    <p><a href="">Rob Rangi</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="span4">
-                    Copyright &copy;2013 all rights reserved
-                </div>
-
-                <div class="span4" data-ng-controller="menuController">
-                    <a class="btn btn-link" data-ng-class="(item.menuRoute == location.path() && 'active')"
-                    data-ng-repeat="item in menuItems" data-toggle="tooltip" href="#{{ item.menuRoute }}"
-                    title="{{ item.menuName }}"><em class="{{ item.menuIcon }}"></em></a>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    </div>
 </footer>
