@@ -60,7 +60,8 @@ appRapid.factory('rapidCourse', function() {
     var rapidCourse={};
 
     rapidCourse.courseItems = 
-    [ { title: "Agile Testing"
+    [ { id: "course-agile-test" 
+    , title: "Agile Testing"
     , duration: "2 days"
     , content: "Agile development methods have become increasingly popular over the last few years. It radically changes the approach to the software development lifecycle, but where does it leave the tester?"
     , objectives: 
@@ -71,7 +72,8 @@ appRapid.factory('rapidCourse', function() {
         , "Test analysis and design in an agile context"
         , "Stories, acceptance criteria and how testing deals with these" ]}
     ,
-    { title: "Exploratory Testing"
+    { id: "course-explore-test" 
+    , title: "Exploratory Testing"
     , duration: "1 day"
     , content: "Exploratory Testing is a focused introduction to effective, practical exploratory testing.This is a hands on course that uses various heuristics and approaches to help testers become better testers."
     , objectives: 
@@ -83,7 +85,8 @@ appRapid.factory('rapidCourse', function() {
         , "Strategies"
         , "Becoming a better skilled tester" ]}
     ,
-    { title: "Exploratory Test Management"
+    { id: "course-explore-mgmt" 
+    , title: "Exploratory Test Management"
     , duration: "1 day"
     , content: "Exploratory Test Management teaches testers how to apply an effective management framework over the top of your exploratory testing using session and thread based test management."
     , objectives:                 
@@ -94,7 +97,8 @@ appRapid.factory('rapidCourse', function() {
         , "Thread based test management"
         , "How to tell an effective testing story" ]
     } ,
-    { title: "Fundamental Software Testing"
+    { id: "course-fundamentals" 
+    , title: "Fundamental Software Testing"
     , duration: "2 days"
     , content: "Fundamental Software Testing focuses on building the thinking and questioning skills of a tester. We show how to take a critical approach to testing with an emphasis on structured exploratory testing using a mixture of lecture, hands on learning games, socratic questioning and the use of different media."
     , objectives:
@@ -105,7 +109,8 @@ appRapid.factory('rapidCourse', function() {
         , "Test approaches"
         , "Test management" ]
     } , 
-    { title: "Test Leadership"
+    { id: "course-test-leadership" 
+    , title: "Test Leadership"
     , duration: "1 days"
     , content: "Test Leadership course helps the aspiring test leaders, test managers or test directors understand the principles of leadership, ethics, motivation as well as practical test management."
     , objectives:

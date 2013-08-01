@@ -981,7 +981,10 @@ a.hdr-next:hover {
   border: 0;
 }
 .accordion-group a {
-  border-bottom: 1px solid #bdc3c7;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 34px;
+  border-bottom: 1px solid #555555;
 }
 
 .accordion-heading {

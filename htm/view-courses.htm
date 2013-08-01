@@ -5,10 +5,10 @@
 				Our Courses
 			</h3>
 			<accordion close-others="true">
-				<accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-					<h4>Course: {{ group.title}} >>	Duration: {{ group.duration }}</h4>
+				<accordion-group heading="{{group.title}}" data-ng-repeat="group in groups">
+					<h4>Course: {{ group.title}} >>	Duration: {{ group.duration }}</h3>
 					{{group.content}}
-					<ul data-ng-repeat="objective in group.objectives">
+					<ul class="gen-list-style1" data-ng-repeat="objective in group.objectives">
 						<li>{{ objective }}</li>
 					</ul>
 				</accordion-group>
