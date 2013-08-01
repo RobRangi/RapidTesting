@@ -1,18 +1,19 @@
-<header id="header" data-ng-controller="menuController">
+<header data-ng-controller="menuController">
     <div class="container-fluid">
         <div class="container">
             <h1>
                 <a href="index.html"><img src="img/logo.png" alt="RapidTesting"></a>
             </h1>
             <form id="search" action="search.php" method="get">
-                <input type="text" name="s"> <a onclick="document.getElementById('search').submit()" class=""></a>
+                <input type="text" name="s">
+                <a onclick="document.getElementById('search').submit()" class=""></a>
                 <div class="clear"></div>
             </form>
             <div class="clear"></div>
             <div class="hdr-menu">
                 <nav class>
                     <ul class="hdr-menubar" >
-                        <li data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() && ' active')">
+                        <li data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() && 'active')">
                             <a href="#{{item.menuRoute}}">{{ item.menuName }}</a>
                         </li>
                     </ul>
@@ -30,7 +31,7 @@
                             <span>Ready to Help</span> We are Test Professionals
                         </li>
                     </ul>
-                </div><a href="#" class="prev"></a><a href="#" class="next"></a>
+                </div><a href="#" class="hdr-prev"></a><a href="#" class="hdr-next"></a>
             </div>
         </div>
     </div>
