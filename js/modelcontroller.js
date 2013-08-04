@@ -22,7 +22,7 @@ appRapid.factory('rapidMenu', function() {
 
     rapidMenu.menuItems = 
     [ {menuRoute: '/home', menuIcon: 'icon-home', menuName: 'Home'}
-    , {menuRoute: '/about', menuIcon: 'icon-cog', menuName: 'About Us'}
+    , {menuRoute: '/about', menuIcon: 'icon-cog', menuName: 'About'}
     , {menuRoute: '/courses', menuIcon: 'icon-user', menuName: 'Courses'}
     , {menuRoute: '/media', menuIcon: 'icon-camera', menuName: 'Media'}
     , {menuRoute: '/blog', menuIcon: 'icon-book', menuName: 'Blog'}

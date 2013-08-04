@@ -1,37 +1,28 @@
 <header data-ng-controller="menuController">
     <div class="container-fluid">
-        <div class="container">
-            <h1>
-                <a href="index.html"><img src="img/logo.png" alt="RapidTesting"></a>
-            </h1>
-            <form id="search" action="search.php" method="get">
-                <input type="text" name="s">
-                <a onclick="document.getElementById('search').submit()" class=""></a>
-                <div class="clear"></div>
-            </form>
-            <div class="clear"></div>
-            <div class="hdr-menu">
-                <nav class>
-                    <ul class="hdr-menubar" >
-                        <li data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() && 'active')">
+        <div class="container hdr-menu-container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="#/home">
+                        <img src="../img/logo_menu.png" alt="Rapid Testing Logo">
+                    </a>
+                    <ul class="nav pull-right">
+                        <li class="text-center" data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() &amp;&amp; 'active')">
                             <a href="#{{item.menuRoute}}">{{ item.menuName }}</a>
                         </li>
                     </ul>
-                </nav>
-                <div class="clear"></div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="hdr-caro-wallpaper" data-ng-show="(location.path() == '/home')"> 
-        <div class="container-fluid">
-            <div class="container">
-                <div class="hdr-caro-text">
-                    <ul class="hdr-carousel">
-                        <li>
-                            <span>Ready to Help</span>With your test needs
-                        </li>
-                    </ul>
-                </div><a href="#" class="hdr-prev"></a><a href="#" class="hdr-next"></a>
+    <div class="container-fluid hdr-carousel-container" data-ng-show="(location.path() == '/home')">
+        <div class="container">
+            <div class="hdr-carousel-text">
+                <ul>
+                    <li>
+                        <h1><span>Our Promise.</span>Better Product Quality</h1>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
