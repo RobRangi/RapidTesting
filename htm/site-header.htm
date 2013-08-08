@@ -1,28 +1,48 @@
 <header data-ng-controller="menuController">
-    <div class="container-fluid">
-        <div class="container hdr-menu-container">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <a class="brand" href="#/home">
-                        <img src="../img/logo_menu.png" alt="Rapid Testing Logo">
-                    </a>
+    <!-- Navigation Bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" 
+                    ng-init="navCollapsed = true" 
+                    ng-click="navCollapsed = !navCollapsed">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#/home#services">Rapid Testing</a>
+                <div collapse="navCollapsed" class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav pull-right">
-                        <li class="text-center" data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() &amp;&amp; 'active')">
-                            <a href="#{{item.menuRoute}}">{{ item.menuName }}</a>
+                        <li data-ng-repeat="item in menuItems" 
+                            data-ng-class="(item.menuRoute == location.path() &amp;&amp; 'active')">
+                            <a href="#{{ item.menuRoute }}">{{ item.menuName }}</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid hdr-carousel-container" data-ng-show="(location.path() == '/home')">
-        <div class="container">
-            <div class="hdr-carousel-text">
-                <ul>
-                    <li>
-                        <h1><span>Our Promise.</span>Better Product Quality</h1>
-                    </li>
-                </ul>
+
+    <!-- Header Image and Logo -->
+    <div id="headerwrap" 
+        data-ng-show="(location.path() == '/home')">
+        <div class="clearfix">
+            <div class="container text-center">
+                <h1>THE ROAD TO</h1>
+                <h1>PRODUCT QUALITY</h1>
+                <h1>STARTS HERE</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Line -->
+    <div id="welcomewrap"
+        data-ng-show="(location.path() == '/home')">
+        <div class="clearfix">
+            <div class="container">
+                <h2 class="text-center">
+                    Contact <a href="mailto:info@rapidtesting.co.nz">Rapid Testing</a> today!
+                </h2>
             </div>
         </div>
     </div>

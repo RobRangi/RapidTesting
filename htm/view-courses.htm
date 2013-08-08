@@ -1,18 +1,24 @@
-<div class="content">
-	<div class="container-fluid">
-		<div class="container">
-			<h3>
-				Our Courses
-			</h3>
-			<accordion close-others="true">
-				<accordion-group heading="{{group.title}}" data-ng-repeat="group in groups">
-					<h4>Course: {{ group.title}} >>	Duration: {{ group.duration }}</h3>
-					{{group.content}}
-					<ul class="gen-list-style1" data-ng-repeat="objective in group.objectives">
-						<li>{{ objective }}</li>
-					</ul>
-				</accordion-group>
-			</accordion>
-		</div>
-	</div>
-</div>
+<section id="courses">
+    <br>
+    <br>
+</section>
+
+<section id="courseswrap" data-ng-controller="courseController">
+    <div class="container">
+        <br>
+        <h2>{{ courseCntl.pagetitle }}</h2>
+        <p>{{ courseCntl.pagelead1 }}{{ courseCntl.pagelead2 }}</p>
+        <div class="row">
+            <div class="span4" data-ng-repeat="course in courseCntl.courses">
+                <div class="mask">
+                    <h3>{{ course.title }} ({{ course.duration }})</h3>
+                    <p>{{ course.content }}</p>
+                    <ul class="courselist" data-ng-repeat="item in course.objectives">
+                        <li>{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>

@@ -1,0 +1,50 @@
+{
+    "pitchItem": [
+        {
+            "hdr1": "Test Consultancy",
+            "hdr2": "Exceed Results",
+            "text": "Rapid can show you how to develop organisational test policies and enterprise test strategies that fit with the way you deliver your projects today.",
+            "icon": "img/consult_circle.svg",
+            "link": "#contact"
+        },
+        {
+            "hdr1": "Test Management",
+            "hdr2": "Deliver Quality",
+            "text": "Our Test Managers are experienced in industry best practices and can implement test frameworks that are structured, efficient and relevant.",
+            "icon": "img/manage_circle.svg",
+            "link": "#contact"
+        },
+        {
+            "hdr1": "Test Training",
+            "hdr2": "Empower People",
+            "text": "Let us work collaboratively with your organization to develop efficient, effective staff who can develop world-class test capability for your projects.",
+            "icon": "img/train_circle.svg",
+            "link": "#courses"
+        }
+    ],
+    "pitchCommitment": 
+    {
+        "hdr1": "OUR COMMITMENT",
+        "hdr2": "Achieving Product Quality through testing",
+        "text": "Rapid Testing is a company dedicated to helping companies to get more out of their testing services. We align with the Context Driven approach to testing and with this in mind we provide the following services to enable this:",
+        "list": [
+            "Providing testing courses to mentor and up-skill your testers to be critical thinkers, better problem solvers and to think outside the square and to add greater value. Too many companies see testers as 'button pushers', however by looking at testing as more than proving specifications, we can help testers provide information that managers need (whether it is good or bad)",
+            "Provision of test consultancy services to evaluate your testing approach, strategies and teams",
+            "Provision of testers for engagements that are more than bodies for projects - they provide value",
+            "Provision of test coaching, mentoring and development for small companies with limited numbers of testers to help build excellent test teams"]
+    },
+    "pitchQuotes" : [
+        {
+            "text": "Brian is not the co-founder of the KWST ... he's the founder. It was his project from the beginning, and he mobilized the support to make it happen including inviting me to facilitate it and attracting the other prominent testing experts who attended. KWST was the first big step in establishing a vibrant community of thinking testers in New Zealand.",
+            "cite": "James Bach, CEO and Principal Consultant"
+        },
+        {
+            "text": "Brian has a real talent for creating communities and for bringing people together. KWST was a magical event full of energy and enthusiasm, and it was Brian that made it all happen. He got 20 software testing leaders in the same room for two days with one of the world leaders in the profession, James Bach, and facilitated and chaired the events. He did an amazing job and created something special.",
+            "cite": "Aaron Hodder, Software Tester"
+        },
+        {
+            "text": "Brian is a charismatic and enthusiastic trainer and tester. He has wonderful ideas about testing and is very well versed in the subject. Brian brings energy to his roles and is a very good component of any team. As a trainer, Brian is professional and delivers the detail clearly and in a fun manner. I would recommend using Brian as a trainer or tester.",
+            "cite": "Richard Robinson, Lead Automation Test Engineer"
+        }
+    ]
+}

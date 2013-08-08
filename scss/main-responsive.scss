@@ -1,24 +1,20 @@
-//
-// Variables
-// --------------------------------------------------
-
-
-// Global values
-// --------------------------------------------------
-$color-heading:         #ff7f66;
-$color-footer:			   #5b6d77;
-$red: 				#ff8871;
-$red:					#ff8f79;
-$hdr-caro-font-size:		70px;
+/*!
+ * RAPID TESTING RESPONSIVE
+ *
+ * Copyright 2013 
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Designed and built based on Twitter Bootstrap.
+ */
 
 // Grays
 // -------------------------
 $black:                 #000;
 $grayDarker:            #222;
-$grayDark:              #333;
-$gray:                  #555;
+$grayDark:              #444;
+$gray:                  #666;
 $grayLight:             #999;
-$grayLighter:           #eee;
+$grayLighter:           #ccc;
 $white:                 #fff;
 
 
@@ -29,277 +25,91 @@ $blueDark:              #0064cd;
 $green:                 #46a546;
 $red:                   #9d261d;
 $yellow:                #ffc40d;
-$orange:                #f89406;
-$pink:                  #c3325f;
+$orange:                #ec602f;
+$pink:                  #ff8871;
 $purple:                #7a43b6;
 
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        #16242c;
-$textColor:             $grayLight;
-
-
-// Links
-// -------------------------
-$linkColor:             #463f2e;
-$linkColorHover:        darken($linkColor, 15%);
-
+$bodyBackground:        #e8e8e8;
+$textColor:             $black;
 
 // Typography
 // -------------------------
-$sansFontFamily:        "Open Sans", Helvetica, Arial, sans-serif;
-$serifFontFamily:       "Roboto", "Times New Roman", Times, serif;
+$sansFontFamily:        "Open Sans Condensed", Helvetica, Arial, sans-serif;
+$textFontFamily:        "BenchNine", Helvetica, Arial, sans-serif;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$baseFontSize:          14px;
+$baseFontSize:          16px;
 $baseFontFamily:        $sansFontFamily;
 $baseLineHeight:        20px;
-$altFontFamily:         $serifFontFamily;
-
-$headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    400;
-$headingsColor:         $white; // empty to use BS default, $textColor
-
-
-// Component sizing
-// -------------------------
-// Based on 14px font-size and 20px line-height
-
-$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
-$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
-$fontSizeMini:          $baseFontSize * 0.75; // ~11px
-
-$paddingLarge:          11px 19px; // 44px
-$paddingSmall:          2px 10px;  // 26px
-$paddingMini:           0 6px;   // 22px
-
-$baseBorderRadius:      4px;
-$borderRadiusLarge:     6px;
-$borderRadiusSmall:     3px;
-
-
-// Tables
-// -------------------------
-$tableBackground:                   transparent; // overall background-color
-$tableBackgroundAccent:             #f9f9f9; // for striping
-$tableBackgroundHover:              #f5f5f5; // for hover
-$tableBorder:                       #ddd; // table and cell border
-
-// Buttons
-// -------------------------
-$btnBackground:                     $white;
-$btnBackgroundHighlight:            darken($white, 10%);
-$btnBorder:                         #ccc;
-
-$btnPrimaryBackground:              $linkColor;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 20%);
-
-$btnInfoBackground:                 #5bc0de;
-$btnInfoBackgroundHighlight:        #2f96b4;
-
-$btnSuccessBackground:              #62c462;
-$btnSuccessBackgroundHighlight:     #51a351;
-
-$btnWarningBackground:              lighten($orange, 15%);
-$btnWarningBackgroundHighlight:     $orange;
-
-$btnDangerBackground:               #ee5f5b;
-$btnDangerBackgroundHighlight:      #bd362f;
-
-$btnInverseBackground:              #444;
-$btnInverseBackgroundHighlight:     $grayDarker;
-
-
-// Forms
-// -------------------------
-$inputBackground:               $white;
-$inputBorder:                   #ccc;
-$inputBorderRadius:             $baseBorderRadius;
-$inputDisabledBackground:       $grayLighter;
-$formActionsBackground:         #f5f5f5;
-$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
-
-
-// Dropdowns
-// -------------------------
-$dropdownBackground:            $white;
-$dropdownBorder:                rgba(0,0,0,.2);
-$dropdownDividerTop:            #e5e5e5;
-$dropdownDividerBottom:         $white;
-
-$dropdownLinkColor:             $grayDark;
-$dropdownLinkColorHover:        $white;
-$dropdownLinkColorActive:       $white;
-
-$dropdownLinkBackgroundActive:  $linkColor;
-$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
-
-
-
-// COMPONENT VARIABLES
-// --------------------------------------------------
-
-
-// Z-index master list
-// -------------------------
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
-$zindexDropdown:          1000;
-$zindexPopover:           1010;
-$zindexTooltip:           1030;
-$zindexFixedNavbar:       1030;
-$zindexModalBackdrop:     1040;
-$zindexModal:             1050;
-
-
-// Sprite icons path
-// -------------------------
-$iconSpritePath:          "../img/glyphicons-halflings.png";
-$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
-
-
-// Input placeholder text color
-// -------------------------
-$placeholderText:         $grayLight;
-
-
-// Hr border color
-// -------------------------
-$hrBorder:                $grayLighter;
-
-
-// Horizontal forms & lists
-// -------------------------
-$horizontalComponentOffset:       180px;
-
-
-// Wells
-// -------------------------
-$wellBackground:                  #f5f5f5;
-
-
-// Navbar
-// -------------------------
-$navbarCollapseWidth:             979px;
-$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
-
-$navbarHeight:                    40px;
-$navbarBackgroundHighlight:       $white;
-$navbarBackground:                darken($navbarBackgroundHighlight, 5%);
-$navbarBorder:                    darken($navbarBackground, 12%);
-
-$navbarText:                      #777;
-$navbarLinkColor:                 #777;
-$navbarLinkColorHover:            $grayDark;
-$navbarLinkColorActive:           $gray;
-$navbarLinkBackgroundHover:       transparent;
-$navbarLinkBackgroundActive:      darken($navbarBackground, 5%);
-
-$navbarBrandColor:                $navbarLinkColor;
-
-// Inverted navbar
-$navbarInverseBackground:                #111111;
-$navbarInverseBackgroundHighlight:       #222222;
-$navbarInverseBorder:                    #252525;
-
-$navbarInverseText:                      $grayLight;
-$navbarInverseLinkColor:                 $grayLight;
-$navbarInverseLinkColorHover:            $white;
-$navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
-$navbarInverseLinkBackgroundHover:       transparent;
-$navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
-
-$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
-$navbarInverseSearchBackgroundFocus:     $white;
-$navbarInverseSearchBorder:              $navbarInverseBackground;
-$navbarInverseSearchPlaceholderColor:    #ccc;
-
-$navbarInverseBrandColor:                $navbarInverseLinkColor;
-
-
-// Pagination
-// -------------------------
-$paginationBackground:                $white;
-$paginationBorder:                    #ddd;
-$paginationActiveBackground:          #f5f5f5;
-
-
-// Hero unit
-// -------------------------
-$heroUnitBackground:              $grayLighter;
-$heroUnitHeadingColor:            inherit;
-$heroUnitLeadColor:               inherit;
-
-
-// Form states and alerts
-// -------------------------
-$warningText:             #c09853;
-$warningBackground:       #fcf8e3;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
-
-$errorText:               #b94a48;
-$errorBackground:         #f2dede;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
-
-$successText:             #468847;
-$successBackground:       #dff0d8;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
-
-$infoText:                #3a87ad;
-$infoBackground:          #d9edf7;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
-
-
-// Tooltips and popovers
-// -------------------------
-$tooltipColor:            $white;
-$tooltipBackground:       #000;
-$tooltipArrowWidth:       5px;
-$tooltipArrowColor:       $tooltipBackground;
-
-$popoverBackground:       $white;
-$popoverArrowWidth:       10px;
-$popoverArrowColor:       $white;
-$popoverTitleBackground:  darken($popoverBackground, 3%);
-
-// Special enhancement for popovers
-$popoverArrowOuterWidth:  $popoverArrowWidth + 1;
-$popoverArrowOuterColor:  rgba(0,0,0,.25);
-
-
-
-// GRID
-// --------------------------------------------------
-
-
-// Default 940px grid
-// -------------------------
-$gridColumns:             12;
-$gridColumnWidth:         60px;
-$gridGutterWidth:         20px;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-
-// 1200px min
-$gridColumnWidth1200:     70px;
-$gridGutterWidth1200:     30px;
-$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
-
-// 768px-979px
-$gridColumnWidth768:      42px;
-$gridGutterWidth768:      20px;
-$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
-
-
-// Fluid grid
-// -------------------------
-$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth);
-$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth);
-
-// 1200px min
-$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200);
-$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200);
-
-// 768px-979px
-$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
-$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
+$altFontFamily:         $textFontFamily;
+
+$headingsFontFamily:    inherit; 
+$headingsFontWeight:    500;
+$headingsColor:         $gray;
+
+
+@mixin setText($ratio:1) {
+	body, p,
+	.courselist,
+	.mask > blockquote,
+	.media-body > ul > li {
+		font-size: ($baseFontSize * $ratio) + 0px;
+	 	line-height: ($baseLineHeight * $ratio) + 0px;
+	}
+}
+@mixin setHeaderWrap($ratio:1) {
+	#headerwrap {
+		min-height: 37.5 / $ratio + 0em;
+		margin-top: 2.5 / $ratio + 0em;
+		padding-top:8.75 / $ratio + 0em;
+		h1 {
+			font-size:4.375 / $ratio + 0em;
+			line-height: 40 / $ratio + 0px;
+		}
+	}
+	#welcomewrap {
+		h2 {
+			font-size:1.875 / $ratio +0em;
+		}
+	}
+}
+
+@media (min-width: 696px) and (max-width: 1280px) {
+	@include setText(0.875);
+}
+@media (max-width: 695px) {
+	@include setText(0.75);
+}
+
+// For all tablet orientations
+
+// Nexus 7 landscape
+@media (max-width: 1280px) {
+	@include setHeaderWrap(1.630434782);
+}
+// iPad landscape
+@media (max-width: 1024px) {
+	@include setHeaderWrap(1.97368421);
+}
+// tablet portrait
+@media (max-width: 979px) {
+	@include setHeaderWrap(0.79787234);
+	.navbar-fixed-top {
+		margin-bottom:0;
+	}
+	#headerwrap {
+		margin-top:0;
+	}
+}
+@media (max-width: 767px) {
+	@include setHeaderWrap(1.25);
+	.navbar-fixed-top {
+		margin-bottom:0;
+	}
+	#headerwrap {
+		margin-top:0;
+	}
+}

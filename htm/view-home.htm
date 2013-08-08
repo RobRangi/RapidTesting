@@ -6,68 +6,52 @@ Controller  : pitchController
 Purpose     : Attraction mode for the Landing Page
 
 ================================================== -->
-<section class="view-home">
-   <div class="hme-pitch-block">
-         <div class="container" data-ng-controller="pitchController">
-            <div class="row hme-pitch-row">
-               <div class="span4 hme-pitch-box" data-ng-repeat="item in pitchItems"> 
-                  <h1>
-                     {{item.pitchName}}
-                  </h1>
-                  <div class="gen-inner">
-                     <img data-ng-src="{{item.pitchIcon}}" alt="">
-                     <h3>
-                        {{item.pitchQuote}}
-                     </h3>
-                     <div class="clear"></div>
-                     {{ item.pitchText}}<br>
-                     <a href="{{item.pitchLink}}" class="btn">Details</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-   </div>  
+<section id="services" data-ng-controller="pitchController">
+   <br>
 
-   <div class="content page1">
-      <div class="container-fluid">
-         <div class="container hme-margin-top">
-            <img src="img/brian.jpg" alt="" class="gen-img-inner gen-float-left">
-            <div class="extra-wrapper">
-               <h2>
-                  Our Services
-               </h2>
-               <div class="text1">
-                  <a href="#">Achieve Product Quality through testing</a>
+   <div id="servicewrap">
+      <div class="container">
+         <div class="row-fluid">
+            <div class="span4" data-ng-repeat="item in homeCntl.pitchItem">
+               <div class="mask">
+                  <img data-ng-src="{{item.icon}}" alt="">
+                  <h3>{{item.hdr1}} - {{item.hdr2}}</h3>
+                  <p>{{ item.text}}</p>
                </div>
-               Rapid Testing is a company dedicated to helping companies to get more out of their testing services.  We align with the Context Driven approach to testing and with this in mind we provide the following services to enable this:-<br>
-               &middot; Providing testing courses to mentor and up-skill your testers to be critical thinkers, better problem solvers and to think outside the square and to add greater value. Too many companies see testers as "button pushers", however by looking at testing as more than proving specifications, we can help testers provide information that managers need (whether it is good or bad).<br>
-               &middot; Provision of test consultancy services to evaluate your testing approach, strategies and teams<br>
-               &middot; Provision of testers for engagements that are more than bodies for projects - they provide value<br>
-               &middot; Provision of test coaching, mentoring and development for small companies with limited numbers of testers to help build excellent test teams
-            </div>
-            <div class="clear"></div>
-            <div class="gen-Divider"></div>
-         </div>
-         <div class="container hme-margin-top">
-            <div class="span4">
-               <blockquote>
-                  &quot;Brian is not the co-founder of the KWST ... he's the founder. It was his project from the beginning, and he mobilized the support to make it happen including inviting me to facilitate it and attracting the other prominent testing experts who attended. KWST was the first big step in establishing a vibrant community of thinking testers in New Zealand.&quot;
-                  <small>James Bach, CEO and Principal Consultant</small>
-               </blockquote>
-            </div>
-            <div class="span4">
-               <blockquote>
-                  &quot;Brian has a real talent for creating communities and for bringing people together. KWST was a magical event full of energy and enthusiasm, and it was Brian that made it all happen. He got 20 software testing leaders in the same room for two days with one of the world leaders in the profession, James Bach, and facilitated and chaired the events. He did an amazing job and created something special.&quot;
-                  <small>Aaron Hodder, Software Tester</small>
-               </blockquote>
-            </div>
-            <div class="span4">
-               <blockquote>
-                  &quot;Brian is a charismatic and enthusiastic trainer and tester. He has wonderful ideas about testing and is very well versed in the subject. Brian brings energy to his roles and is a very good component of any team. As a trainer, Brian is professional and delivers the detail clearly and in a fun manner. I would recommend using Brian as a trainer or tester.&quot;
-                  <small>Richard Robinson, Lead Automation Test Engineer</small>
-               </blockquote>
             </div>
          </div>
       </div>
    </div>
+
+   <div class="container">
+      <hr><br>
+      <div class="row media">
+         <img src="img/brian.jpg" alt="" class="media-object pull-left">
+         <div class="media-body">
+            <h1 class="media-heading">{{ homeCntl.pitchCommitment.hdr1 }}</h1>
+            <h2>{{ homeCntl.pitchCommitment.hdr2 }}</h2>
+            <p>{{ homeCntl.pitchCommitment.text }}</p>
+            <ul data-ng-repeat="item in homeCntl.pitchCommitment.list">
+               <li>{{ item }}</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <div id="quoteswrap">
+      <div class="container">
+         <hr><br>
+         <div class="row">
+            <div class="span4" data-ng-repeat="quote in homeCntl.pitchQuotes">
+               <div class="mask">
+                  <blockquote>
+                     &quot;{{ quote.text }}&quot;
+                     <small>{{ quote.cite }}</small>
+                  </blockquote>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
 </section>
