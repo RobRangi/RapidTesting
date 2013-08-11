@@ -1,120 +1,110 @@
 /*
- * RAPID TESTING RESPONSIVE
- *
- * Copyright 2013 
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- * Designed and built based on Twitter Bootstrap.
- */
+* RAPID TESTING
+*
+* Copyright 2013 
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+* Designed and built based on Twitter Bootstrap.
+*/
 @media (min-width: 696px) and (max-width: 1280px) {
-  /* line 58, ../scss/main-responsive.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000354}}
+  h1 {
+    font-size: 4.43012em;
+    margin-bottom: 0.3125em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000360}}
+  h2 {
+    font-size: 2.95313em;
+    line-height: 59.0625px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000365}}
+  h3 {
+    font-size: 1.96875em;
+    line-height: 39.375px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
+  h4 {
+    font-size: 1.3125em;
+    line-height: 26.25px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000379}}
   body, p,
   .courselist,
   .mask > blockquote,
-  .media-body > ul > li {
+  .mask-list > li {
     font-size: 14px;
     line-height: 17.5px;
   }
 }
-@media (max-width: 695px) {
-  /* line 58, ../scss/main-responsive.scss */
+@media (min-width: 241px) and (max-width: 695px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000354}}
+  h1 {
+    font-size: 3.79725em;
+    margin-bottom: 0.26786em;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000360}}
+  h2 {
+    font-size: 2.53125em;
+    line-height: 50.625px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000365}}
+  h3 {
+    font-size: 1.6875em;
+    line-height: 33.75px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
+  h4 {
+    font-size: 1.125em;
+    line-height: 22.5px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000379}}
   body, p,
   .courselist,
   .mask > blockquote,
-  .media-body > ul > li {
+  .mask-list > li {
     font-size: 12px;
     line-height: 15px;
   }
 }
-@media (max-width: 1280px) {
-  /* line 64, ../scss/main-responsive.scss */
-  #headerwrap {
-    min-height: 23.0em;
-    margin-top: 1.53333em;
-    padding-top: 5.36667em;
-  }
-  /* line 68, ../scss/main-responsive.scss */
-  #headerwrap h1 {
-    font-size: 2.68333em;
-    line-height: 24.53333px;
+@media (max-width: 240px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000354}}
+  h1 {
+    font-size: 3.16438em;
+    margin-bottom: 0.22321em;
   }
 
-  /* line 74, ../scss/main-responsive.scss */
-  #welcomewrap h2 {
-    font-size: 1.15em;
-  }
-}
-@media (max-width: 1024px) {
-  /* line 64, ../scss/main-responsive.scss */
-  #headerwrap {
-    min-height: 19.0em;
-    margin-top: 1.26667em;
-    padding-top: 4.43333em;
-  }
-  /* line 68, ../scss/main-responsive.scss */
-  #headerwrap h1 {
-    font-size: 2.21667em;
-    line-height: 20.26667px;
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000360}}
+  h2 {
+    font-size: 2.10938em;
+    line-height: 42.1875px;
   }
 
-  /* line 74, ../scss/main-responsive.scss */
-  #welcomewrap h2 {
-    font-size: 0.95em;
-  }
-}
-@media (max-width: 979px) {
-  /* line 64, ../scss/main-responsive.scss */
-  #headerwrap {
-    min-height: 47.0em;
-    margin-top: 3.13333em;
-    padding-top: 10.96667em;
-  }
-  /* line 68, ../scss/main-responsive.scss */
-  #headerwrap h1 {
-    font-size: 5.48333em;
-    line-height: 50.13333px;
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000365}}
+  h3 {
+    font-size: 1.40625em;
+    line-height: 28.125px;
   }
 
-  /* line 74, ../scss/main-responsive.scss */
-  #welcomewrap h2 {
-    font-size: 2.35em;
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
+  h4 {
+    font-size: 0.9375em;
+    line-height: 18.75px;
   }
 
-  /* line 100, ../scss/main-responsive.scss */
-  .navbar-fixed-top {
-    margin-bottom: 0;
-  }
-
-  /* line 103, ../scss/main-responsive.scss */
-  #headerwrap {
-    margin-top: 0;
-  }
-}
-@media (max-width: 767px) {
-  /* line 64, ../scss/main-responsive.scss */
-  #headerwrap {
-    min-height: 30em;
-    margin-top: 2em;
-    padding-top: 7em;
-  }
-  /* line 68, ../scss/main-responsive.scss */
-  #headerwrap h1 {
-    font-size: 3.5em;
-    line-height: 32px;
-  }
-
-  /* line 74, ../scss/main-responsive.scss */
-  #welcomewrap h2 {
-    font-size: 1.5em;
-  }
-
-  /* line 109, ../scss/main-responsive.scss */
-  .navbar-fixed-top {
-    margin-bottom: 0;
-  }
-
-  /* line 112, ../scss/main-responsive.scss */
-  #headerwrap {
-    margin-top: 0;
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000379}}
+  body, p,
+  .courselist,
+  .mask > blockquote,
+  .mask-list > li {
+    font-size: 10px;
+    line-height: 12.5px;
   }
 }

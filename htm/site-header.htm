@@ -3,18 +3,15 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="btn btn-navbar" 
-                    ng-init="navCollapsed = true" 
-                    ng-click="navCollapsed = !navCollapsed">
+                <a class="btn btn-navbar" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#/home#services">Rapid Testing</a>
+                <a class="brand" href="/">Rapid Testing</a>
                 <div collapse="navCollapsed" class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav pull-right">
-                        <li data-ng-repeat="item in menuItems" 
-                            data-ng-class="(item.menuRoute == location.path() &amp;&amp; 'active')">
+                        <li data-ng-repeat="item in menuItems" data-ng-class="(item.menuRoute == location.path() &amp;&amp; 'active')">
                             <a href="#{{ item.menuRoute }}">{{ item.menuName }}</a>
                         </li>
                     </ul>
@@ -23,26 +20,24 @@
         </div>
     </div>
 
-    <!-- Header Image and Logo -->
-    <div id="headerwrap" 
-        data-ng-show="(location.path() == '/home')">
-        <div class="clearfix">
-            <div class="container text-center">
-                <h1>THE ROAD TO</h1>
-                <h1>PRODUCT QUALITY</h1>
-                <h1>STARTS HERE</h1>
+    <div data-ng-show="(location.path() == '/')">
+        <!-- Header Image -->
+        <div class="picturewrap">
+            <div class="clearfix">
+                <div class="container text-center">
+                    <h1>THE ROAD TO</h1>
+                    <h1>PRODUCT QUALITY</h1>
+                    <h1>STARTS HERE</h1>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Welcome Line -->
-    <div id="welcomewrap"
-        data-ng-show="(location.path() == '/home')">
-        <div class="clearfix">
-            <div class="container">
-                <h2 class="text-center">
+        <!-- Call to Action Line -->
+        <div class="ctawrap">
+            <div class="container-fluid">
+                <p class="text-center">
                     Contact <a href="mailto:info@rapidtesting.co.nz">Rapid Testing</a> today!
-                </h2>
+                </p>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 {
-    "pitchItem": [
+    "pitch": [
         {
             "hdr1": "Test Consultancy",
             "hdr2": "Exceed Results",
@@ -22,7 +22,7 @@
             "link": "#courses"
         }
     ],
-    "pitchCommitment": 
+    "commitment": 
     {
         "hdr1": "OUR COMMITMENT",
         "hdr2": "Achieving Product Quality through testing",
@@ -33,7 +33,7 @@
             "Provision of testers for engagements that are more than bodies for projects - they provide value",
             "Provision of test coaching, mentoring and development for small companies with limited numbers of testers to help build excellent test teams"]
     },
-    "pitchQuotes" : [
+    "quote" : [
         {
             "text": "Brian is not the co-founder of the KWST ... he's the founder. It was his project from the beginning, and he mobilized the support to make it happen including inviting me to facilitate it and attracting the other prominent testing experts who attended. KWST was the first big step in establishing a vibrant community of thinking testers in New Zealand.",
             "cite": "James Bach, CEO and Principal Consultant"

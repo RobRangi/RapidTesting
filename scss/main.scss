@@ -1,45 +1,43 @@
 /*!
- * RAPID TESTING
- *
- * Copyright 2013 
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- * Designed and built based on Twitter Bootstrap.
- */
+* RAPID TESTING
+*
+* Copyright 2013 
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+* Designed and built based on Twitter Bootstrap.
+*/
 
 // Grays
-// -------------------------
-$black:         #000;
-$grayDarker:    #222;
-$grayDark:      #444;
-$gray:          #666;
-$grayLight:     #999;
-$grayLighter:   #ccc;
-$white:         #fff;
+// ----------------------------------------------
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #444;
+$gray:                  #666;
+$grayLight:             #999;
+$grayLighter:           #ccc;
+$white:                 #fff;
 
 // Flat UI Greys/pumpkins
-// -------------------------
-$asbestos:      #7f8c8d;
-$concrete:      #95a5a6;
-$silver:        #bdc3c7;
-$clouds:        #ecf0f1;
+// ----------------------------------------------
+$asbestos:              #7f8c8d;
+$concrete:              #95a5a6;
+$silver:                #bdc3c7;
+$clouds:                #ecf0f1;
 
-$pomegranite:   #c0392b;
-$alizarin:      #e74c3c;
-$pumpkin:       #d35400;
-$carcrot:       #e67e22;
-
-$orange:        #ec602f;
+$pomegranite:           #c0392b;
+$alizarin:              #e74c3c;
+$pumpkin:               #d35400;
+$carrot:                #e67e22;
 
 // Scaffolding
-// -------------------------
-$bodyBackground:        #e8e8e8;
+// ----------------------------------------------
+$bodyBackground:        $concrete;
 $textColor:             $black;
 
 // Typography
-// -------------------------
+// ----------------------------------------------
 $sansFontFamily:        "Open Sans Condensed", Helvetica, Arial, sans-serif;
-$textFontFamily:        "Ubuntu", Helvetica, Arial, sans-serif;
+$textFontFamily:        "BenchNine", Helvetica, Arial, sans-serif;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 $baseFontSize:          16px;
@@ -48,233 +46,200 @@ $baseLineHeight:        20px;
 $altFontFamily:         $textFontFamily;
 
 $headingsFontFamily:    inherit; 
-$headingsFontWeight:    500;
+$headingsFontWeight:    normal;
 $headingsColor:         $pumpkin;
 
-/********** MAIN CONFIGURATION **********/
- body {
+
+// Standard selectors
+// ----------------------------------------------
+body {
     position:           relative;
-    background-color:   $bodyBackground;
     color:              $textColor;
+    background-color:   $bodyBackground;
     font-family:        $baseFontFamily;
     font-size:          $baseFontSize;
+    line-height:        $baseLineHeight;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-family:        $headingsFontFamily;
     font-weight:        $headingsFontWeight;
     color:              $headingsColor;
+    text-transform:     uppercase;
 }
 h1 {
-    font-size:          3.75em;
-    margin-bottom:      25px;
+    // 81px @ 16px
+    font-size:          5.063em; 
+    margin-bottom:      0.357142857em;
 }
 h2 {
-    margin-bottom:      15px;
+    // 54px @ 16px
+    font-size:          3.375em;
+    line-height:        67.5px;
 }
 h3 {
-    margin-bottom:      1px
+    // 36px @ 16px
+    font-size:          2.25em;
+    line-height:        45px;
 }
-h5 {
-    text-align:         center
+h4 {
+    // 24px @ 16px
+    font-size:          1.5em;
+    line-height:        30px;
 }
 p {
-    margin-bottom:      20px;
     font-family:        $altFontFamily;
     font-size:          $baseFontSize;
+    line-height:        $baseLineHeight;
+    margin:             0;
 }
 a {
-    text-decoration:none;
+    text-decoration:    none;
     &:hover {
         text-decoration:none;
     }
 }
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    margin-left:12px;
-    font-size:0.9375em;
-    font-style:italic;
-    color:$black;
-    line-height:5px;
-    letter-spacing:0
-}
 hr {
-    margin: 1em 0;
-    border: 0;
-    border-top: 1px dashed $grayLighter;
-    border-bottom: 1px dashed $grayLight;
+    margin:             1em 0;
+    border-top:         1px dashed $grayLighter;
+    border-bottom:      1px dashed $grayLight;
 }
 
-/********** BOOTSTRAP MODIFICATIONS **********/
-
-/********** NAVBAR CHANGES **********/
+// worker classes
+// ----------------------------------------------
+.page-title {
+    margin:             1.5em 0.25em 0.5em;
+    border-left:        0.25em $pumpkin solid;
+    padding-left:       0.25em;
+    text-transform:     uppercase;
+}
+// Changes for site-header.htm
+// ----------------------------------------------
 .navbar-inverse {
     .navbar-inner {
         text-transform: uppercase;
     }
 }
-
-/********** HEADER WRAP **********/
- #headerwrap {
-    width: 100%;
-    background: url(../img/masthead.jpg) no-repeat fixed bottom;
+.picturewrap {  
+    background:         $bodyBackground url(../img/masthead.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size:    cover;
 
-    min-height: 37.5em;
-    margin-top: 2.5em;
-    padding-top:8.75em;
-    text-align:center;
-    
+    width:              100%;
+    min-height:         37.5em;
+    margin-top:         2.5em;
+    padding-top:        8.75em;
+
     h1 {
-        font-family:$baseFontFamily;
-        font-weight:400;
-        font-size:4.375em;
-        color:$white;
+        color:          $white;
     }
 }
-
-/********** WELCOME WRAP **********/
- #welcomewrap {
-    width: 100%;
-    margin-top: -65px;
-    background:rgba(22,22,22,0.5);
-    color:$white;
-    
-    .container {
-        padding:0;
-    }
-    h2 {
-        font-size:1.875em;
-        color:$clouds;
-    }
+.ctawrap {
+    padding:            1em 0;
+    margin-top:         -3.25em;
+    background:         rgba(22,22,22,0.5);
+    color:              $white;
     a {
-        color:$pumpkin;
+        color:          $pumpkin;
         &:hover {
-            color:$silver;
+            color:      $gray;
         }
     }
 }
-/********** SERVICE/QUOTES WRAP **********/
- #servicewrap,
- #quoteswrap {
-    display:block;
-    text-align:center;
 
+// Changes for view-home.htm
+// ----------------------------------------------
+#services {
+    background-color:   $clouds;
+    padding:            2em 0;
+}
+.wrapPitch,
+.wrapCommitment {
+     margin-bottom:     2em;
+}
+
+// Changes for view-courses.htm
+// ----------------------------------------------
+#courseswrap {
+    display:            block;
+    background:         $silver url(../img/courses.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:    cover;
+
+    padding-bottom:     2em;
+
+    h2, h3, h4 {
+        color:          $white;
+    }
     h2 {
-        text-align:left;
-        margin-left:5px;
-        border-left:10px #ec602f solid;
-        padding-left:3px;
+        border-left:    0.25em $white solid;
+
     }
-    blockquote {
-        text-align:left;
+    h4 {    
+        padding-bottom: 0.25em;
+        border-bottom:  1px $white solid;
+    }
+    .mask:hover {
+        background-color:   rgba($pumpkin, 0.7);
     }
 }
 
-.courselist,
-.media-body > ul > li,
- {
-    font-family:$altFontFamily;
-    font-size:$baseFontSize;
+// Changes for view-about.htm
+// ----------------------------------------------
+#about {
+    background-color:   $clouds;
 }
 
 
-/********** ABOUT WRAP **********/
- #courseswrap {
-    display:block;
-    h2 {
-        text-align:left;
-        margin-left:5px;
-        border-left:10px #ec602f solid;
-        padding-left:3px;
-    }
-    h3 {
-        font-family:$baseFontFamily;
-        font-weight:400;
-        color:$pumpkin;
-        border-bottom:1px $pumpkin solid;
-    }
+// Changes for view-media.htm
+// ----------------------------------------------
+#mediawrap {
+    display:            block;
+    background-color:   $clouds;
+    padding-bottom:     2em;
 }
-/********** FOOTER WRAP **********/
-#footerwrap,
-#contactwrap {
+// Changes for view-blog.htm
+// ----------------------------------------------
+#blogwrap {
+    display:            block;
+    background-color:   $clouds;
+    padding-bottom:     2em;
+}
+// Changes for view-contact.htm
+// ----------------------------------------------
+.contactwrap {
     width: 100%;
-    background-color: $asbestos;
+    color:$white;
+    background-color: $concrete;
 
     .span4 {
         padding: 0 1em;
     }
-
-    h2 {
-        text-align:left;
-        margin-left:5px;
-        border-left:10px #ec602f solid;
-        padding-left:3px;
-        margin-bottom:40px;
+    h2, h3, h4 {
         color:$white;
     }
-    h3 {
-        font-family:$baseFontFamily;
-        font-weight:400;
-        font-size:30px;
-        color:$pumpkin;
-        text-align:center;
-        margin:5px;
-    }
-    h4 {
-        font-family:$baseFontFamily;
-        font-weight:400;
-        font-size:22px;
-        line-height:28px;
-        color:$white;
-        margin:5px;
-    }
-    p {
-        font-family:$baseFontFamily;
-        font-weight:400;
-        font-size:22px;
-        line-height:28px;
-        color:#8a8888;
-        padding-top:50px;
-        margin-bottom:10px;
-        margin:5px;
-    }
 }
-
-form[novalidate] input {
-    border-left-width: 8px;
-    border-color: #3498db;
-    border-style:solid;
-}
-
-input.ng-invalid.ng-dirty,
-input[required].ng-pristine {
-    border-color:#e74c3c;
-}
-
-input.ng-valid.ng-dirty {
-    border-color:#2ecc71;
-}
-/********** MAP SECTION **********/
- #map {
+.map {
     display:block;
     width:100%;
-    margin:0px;
+    padding: 3em 0 5.5em;
 }
+
 /********** MASKS **********/
-
 .mask {
-    display:block;
-    padding:0.625em;
-    line-height:1.25em;
-    
+    display:                block;
+    padding:                1em;
+    line-height:            1.25em;
     &:hover {
-        background-color:$white;
+        background-color:   rgba($white, 0.5);
     }
-
     > blockquote {
-        font-family:$altFontFamily;
-        font-size:$baseFontSize;
+        @extend p;
     }
+}
+.mask-list > li {
+    @extend p;
 }

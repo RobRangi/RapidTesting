@@ -1,165 +1,47 @@
-<div class="content">
+<section id="about" data-ng-controller="aboutController">
     <div class="container">
+        <h2 class="page-title" data-ng-bind="aboutCntl.pagetitle"></h2>
         <div class="row-fluid">
             <div class="span4">
-                <h3>
-                    about us
-                </h3>
-                <img src="../img/Brian.jpg" alt="" class="gen-img-inner" width="80%">
-                <div class="text1 tx2">
-                    Brian Osman
-                    <br>Principal Consultant
-                </div>We deliver training that is based on improving the way testers see, think, interact with others and with the system under test. This is one way to show our value-add as testers. We are community focused liaising with like-minded, free thinking testers and take the opportunity to present at conferences and SIGsT groups.
-                <br>
-                <br>Brian founded the Kiwi Workshop on Software Testing (KWST), an invite-only peer conference with 17 New Zealand test leaders facilitated with help and guidance from James Bach.
-                <br>
-                <a href="#/contact" class="btn">Contact us</a>
+                <div class="mask">
+                    <h3 data-ng-bind="aboutCntl.col1header"></h3>
+                    <img src="../img/Brian.jpg" alt="">
+                    <h3 data-ng-bind="aboutCntl.name"></h3>
+                    <h4 data-ng-bind="aboutCntl.title"></h4>
+                    <p data-ng-bind="aboutCntl.introtext"></p>                    
+                </div>
             </div>
-            <div class="span4">
-                <h3>
-                    our values
-                </h3>
-                <ul class="gen-list-style1">
-                    <li>
-                        <div class="count">
-                            1.
-                        </div>
-                        <div class="extra-wrapper">
-                            <div class="text1">
-                                <a href="#">We are Sith Lords</a>
-                            </div>You may have hidden the plans in the escape pod but we will send a detachment down to retrieve them, and have our Commanders see to it personally. There'll be no one to stop us this time!
-                        </div>
-                    </li>
-                    <li>
-                        <div class="count">
-                            2.
-                        </div>
-                        <div class="extra-wrapper">
-                            <div class="text1">
-                                <a href="#">We destroy Planets</a>
-                            </div>Alderaan was a peaceful planet. It had no weapons. You can't possibly… we have traced the Rebel spies to her. Now she is my only link to finding their secret base.
-                        </div>
-                    </li>
-                    <li>
-                        <div class="count">
-                            3.
-                        </div>
-                        <div class="extra-wrapper">
-                            <div class="text1">
-                                <a href="#">We know the Force too!</a>
-                            </div>Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense.
-                        </div>
-                    </li>
-                    <li>
-                        <div class="count">
-                            4.
-                        </div>
-                        <div class="extra-wrapper">
-                            <div class="text1">
-                                <a href="#">We celebrate our Victories</a>
-                            </div>This will be a day long remembered. It has seen the end of Kenobi, and will soon see the end of the rebellion.
-                        </div>
-                    </li>
-                    <li>
-                        <div class="count">
-                            5.
-                        </div>
-                        <div class="extra-wrapper">
-                            <div class="text1">
-                                <a href="#">We're looking for Droid</a>
-                            </div>We don’t need to see your identification … Those aren’t the droids we’re looking for … You can go about your business … Move along
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="span4">
-                <h3>
-                    testing activity
-                </h3>
-                <div class="text1 mb0 tx1">
-                    1996 -
-                    <span class="col1"><a href="#">Sed in lacus ut enim adipiscing</a>
-                    </span>
-                </div>
-                <p class="p1">
-                    Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.
-                </p>
-                <div class="text1 mb0 tx1">
-                    2003 -
-                    <span class="col1"><a href="#">Aenean nec eros</a>
-                    </span>
-                </div>
-                <p class="p1">
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur. ridiculus.
-                </p>
-                <div class="text1 mb0 tx1">
-                    2005 -
-                    <span class="col1"><a href="#">In faucibus orci luctus</a>
-                    </span>
-                </div>
-                <p class="p1">
-                    Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.
-                </p>
-                <div class="text1 mb0 tx1">
-                    2009 -
-                    <span class="col1"><a href="#">Ut pharetra augue nec augue</a>
-                    </span>
-                </div>
-                <p class="p1">
-                    Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.
-                </p>
-                <div class="text1 mb0 tx1">
-                    2011 -
-                    <span class="col1"><a href="#">Scelerisque vita</a>
-                    </span>
-                </div>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.
-            </div>
-        </div>
-        <div class="clear"></div>
 
-        <div class="container abt-accomplishment-block">
-            <h3>
-                Accomplishments
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla duiusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus. nec, luctus a, lorem. Maecenas tristique orci ac sem.
-            </p>
+            <div class="span4">
+                <div class="mask">
+                    <h3 data-ng-bind="aboutCntl.col2header"></h3>
+                    <ul class="mask-list">
+                        <li data-ng-repeat="item in aboutCntl.values">
+                            <h4 data-ng-bind="item.valuehead"></h4>
+                            <p data-ng-bind="item.valuetext"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <div class="row-fluid">
-                <div class="span4">
-                    <div class="post">
-                        <div class="text1">
-                            Nulla facilisi
-                        </div>
-                        <div class="pad1">
-                            <div class="col1">Ut tellus dolor, dapibus eget</div>
-                            Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula liquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem.
-                        </div>
-                    </div>
-                </div>
-                <div class="span4">
-                    <div class="post">
-                        <div class="text1">
-                            Maecenas tristique orci
-                        </div>
-                        <div class="pad1">
-                            <div class="col1">Ut tellus dolor, dapibus eget</div>
-                            Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula liquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem.
-                        </div>
-                    </div>
-                </div>
-                <div class="span4">
-                    <div class="post">
-                        <div class="text1">
-                            Donec sit amet
-                        </div>
-                        <div class="pad1">
-                            <div class="col1">Ut tellus dolor, dapibus eget</div>
-                            Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula liquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem.
-                        </div>
-                    </div>
+            <div class="span4">
+                <div class="mask">
+                    <h3 data-ng-bind="aboutCntl.col3header"></h3>
+                    <a class="twitter-timeline" href="https://twitter.com/bjosman" data-widget-id="366302596861923328"></a>
+                    <script>
+                        ! function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0],
+                                p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + "://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");
+                    </script>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

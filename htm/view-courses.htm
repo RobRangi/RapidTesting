@@ -1,24 +1,23 @@
-<section id="courses">
-    <br>
-    <br>
-</section>
-
-<section id="courseswrap" data-ng-controller="courseController">
+<section id="courseswrap" 
+    data-ng-controller="courseController">
     <div class="container">
-        <br>
-        <h2>{{ courseCntl.pagetitle }}</h2>
+        <h2 class="page-title" 
+            data-ng-bind="courseCntl.pagetitle"></h2>
         <p>{{ courseCntl.pagelead1 }}{{ courseCntl.pagelead2 }}</p>
+        <br>
         <div class="row">
-            <div class="span4" data-ng-repeat="course in courseCntl.courses">
+            <div class="span4" 
+                data-ng-repeat="course in courseCntl.courses">
                 <div class="mask">
-                    <h3>{{ course.title }} ({{ course.duration }})</h3>
-                    <p>{{ course.content }}</p>
-                    <ul class="courselist" data-ng-repeat="item in course.objectives">
-                        <li>{{ item }}</li>
+                    <h4>{{ course.title }} ({{course.duration}})</h4>
+                    <p data-ng-bind="course.content"></p>
+                    <br>
+                    <ul class="mask-list" 
+                        data-ng-repeat="item in course.objectives">
+                        <li><p data-ng-bind="item"></p></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <br>
 </section>

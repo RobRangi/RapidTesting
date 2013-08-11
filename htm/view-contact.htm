@@ -1,24 +1,18 @@
-<section id="contact">
-    <br>
-    <br>
-</section>
-
-<section id="contactwrap">
+<section id="contact" class="contactwrap">
     <div class="container">
-        <br>
-        <h2>CONTACT US</h2>
-        <div class="row">
+        <h2 class="page-title">Contact Us</h2>
+        <div class="row-fluid">
             <div class="span4">
-                <h4>Rapid Testing</h4>
+                <h3>Rapid Testing</h3>
                 <h4>1 Willis Street</h4>
                 <h4>Wellington 6001</h4>
                 <h4>New Zealand</h4>
                 <br>
+                <h4>Phone: +64 27 518 0519</h4>
                 <h4>Freephone: +64 800 GO4 TEST</h4>
-                <h4>Telephone: +64 27 518 0519</h4>
             </div>
 
-            <div class="span4">
+            <div class="span8">
                 <table>
                     <tr>
                         <td><img src="img/icons/email/email-32.png" alt="email"></td>
@@ -26,61 +20,22 @@
                     </tr>
                     <tr>
                         <td><img src="img/icons/googleplus/googleplus-32.png" alt="google plus"></td>
-                        <td><h4>Brian on google+</h4></td>
+                        <td><h4>Contact Rapid via Google+</h4></td>
                     </tr>
                     <tr>
                         <td><img src="img/icons/linkedin/linkedin-32.png" alt="linked in"></td>
-                        <td><h4>Brian on Linkedin</h4></td>
+                        <td><h4>Contact Rapid via Linkedin</h4></td>
                     </tr>
                     <tr>
                         <td><img src="img/icons/twitter/twitter-32.png" alt="twitter"></td>
-                        <td><h4>Brian on Twitter</h4></td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/icons/wordpress/wordpress-32.png" alt="wordpress"></td>
-                        <td><h4>The Tao of Software Testing Blogs</h4></td>
+                        <td><h4>Contact Rapid via Twitter</h4></td>
                     </tr>
                 </table>
-            </div>
-
-            <div class="span4">
-                <form name="form" novalidate>
-                    <fieldset>
-                        <label class="name">
-                            <h4>Name:</h4>
-                            <input type="text" ng-model="newUser.name" required>
-                            <span class="error" ng-show="newUser.name.$error.required">Name required!</span>
-                        </label>
-                        <label class="email">
-                            <h4>Email:</h4>
-                            <input type="email" ng-model="newUser.email" required>
-                            <span class="error" ng-show="newUser.$error.required">Email address required!</span>
-                            <span class="error" ng-show="newUser.$error.email">Invalid Email address</span>
-                        </label>
-                        <label class="phone">
-                            <h4>Phone:</h4>
-                            <input type="tel" ng-model="newUser.phone" required>
-                            <span class="error" ng-show="newUser.$error.required">Phone No. required!</span>
-                        </label>
-                        <label class="message">
-                            <h4>Message:</h4>
-                            <textarea type="text" ng-model="newUser.message" required>Message</textarea>
-                            <span class="error" ng-show="newUser.$error.required">Message required!</span>
-                        </label>
-                        <button
-                            ng-disabled="form.$invalid" class="btn btn-primary">
-                            Submit
-                        </button>
-                    </fieldset>
-                </form>
             </div>
         </div>
     </div>
 
-    <div id="map">
+    <div class="map">
         <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.nz/maps?q=-41.285933,174.77608&amp;num=1&amp;t=h&amp;ie=UTF8&amp;z=14&amp;ll=-41.285711,174.775951&amp;output=embed"></iframe>
     </div>
-    <br>
-    <br>
-    <br>
 </section>

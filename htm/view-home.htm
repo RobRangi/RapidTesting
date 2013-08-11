@@ -1,57 +1,48 @@
-<!-- ==================================================
+<section id="services" data-ng-controller="cntlHome">
 
-Viewname    : Home
-RouterName  : /home
-Controller  : pitchController 
-Purpose     : Attraction mode for the Landing Page
-
-================================================== -->
-<section id="services" data-ng-controller="pitchController">
-   <br>
-
-   <div id="servicewrap">
-      <div class="container">
-         <div class="row-fluid">
-            <div class="span4" data-ng-repeat="item in homeCntl.pitchItem">
-               <div class="mask">
-                  <img data-ng-src="{{item.icon}}" alt="">
-                  <h3>{{item.hdr1}} - {{item.hdr2}}</h3>
-                  <p>{{ item.text}}</p>
-               </div>
+    <div class="wrapPitch">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4" data-ng-repeat="item in dataHome.pitch">
+                    <div class="mask text-center">
+                        <img data-ng-src="{{item.icon}}" alt="">
+                        <h4>{{item.hdr1}} - {{item.hdr2}}</h4>
+                        <p data-ng-bind="item.text"></p>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+        <hr class="container">
+    </div>
 
-   <div class="container">
-      <hr><br>
-      <div class="row media">
-         <img src="img/brian.jpg" alt="" class="media-object pull-left">
-         <div class="media-body">
-            <h1 class="media-heading">{{ homeCntl.pitchCommitment.hdr1 }}</h1>
-            <h2>{{ homeCntl.pitchCommitment.hdr2 }}</h2>
-            <p>{{ homeCntl.pitchCommitment.text }}</p>
-            <ul data-ng-repeat="item in homeCntl.pitchCommitment.list">
-               <li>{{ item }}</li>
-            </ul>
-         </div>
-      </div>
-   </div>
-
-   <div id="quoteswrap">
-      <div class="container">
-         <hr><br>
-         <div class="row">
-            <div class="span4" data-ng-repeat="quote in homeCntl.pitchQuotes">
-               <div class="mask">
-                  <blockquote>
-                     &quot;{{ quote.text }}&quot;
-                     <small>{{ quote.cite }}</small>
-                  </blockquote>
-               </div>
+    <div class="wrapCommitment">
+        <div class="container">
+            <div class="row-fluid media">
+                <img src="../img/Brian.jpg" alt="" class="media-object pull-left">
+                <div class="media-body">
+                    <h3 class="media-heading" data-ng-bind="dataHome.commitment.hdr1"></h3>
+                    <h4 data-ng-bind="dataHome.commitment.hdr2"></h4>
+                    <p data-ng-bind="dataHome.commitment.text"></p>
+                    <br>
+                    <ul class="mask-list" data-ng-repeat="item in dataHome.commitment.list">
+                        <li data-ng-bind="item"></li>
+                    </ul>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-   <br>
+        </div>
+        <hr class="container">
+    </div>
+
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span4" data-ng-repeat="quote in dataHome.quote">
+                <div class="mask">
+                    <blockquote>
+                        &quot;{{ quote.text }}&quot;
+                        <small data-ng-bind="quote.cite"></small>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

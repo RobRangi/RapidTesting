@@ -1,14 +1,14 @@
 /*!
- * RAPID TESTING RESPONSIVE
- *
- * Copyright 2013 
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- * Designed and built based on Twitter Bootstrap.
- */
+* RAPID TESTING
+*
+* Copyright 2013 
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+* Designed and built based on Twitter Bootstrap.
+*/
 
 // Grays
-// -------------------------
+// ----------------------------------------------
 $black:                 #000;
 $grayDarker:            #222;
 $grayDark:              #444;
@@ -17,26 +17,25 @@ $grayLight:             #999;
 $grayLighter:           #ccc;
 $white:                 #fff;
 
+// Flat UI Greys/pumpkins
+// ----------------------------------------------
+$asbestos:              #7f8c8d;
+$concrete:              #95a5a6;
+$silver:                #bdc3c7;
+$clouds:                #ecf0f1;
 
-// Accent colors
-// -------------------------
-$blue:                  #049cdb;
-$blueDark:              #0064cd;
-$green:                 #46a546;
-$red:                   #9d261d;
-$yellow:                #ffc40d;
-$orange:                #ec602f;
-$pink:                  #ff8871;
-$purple:                #7a43b6;
-
+$pomegranite:           #c0392b;
+$alizarin:              #e74c3c;
+$pumpkin:               #d35400;
+$carrot:                #e67e22;
 
 // Scaffolding
-// -------------------------
-$bodyBackground:        #e8e8e8;
+// ----------------------------------------------
+$bodyBackground:        $concrete;
 $textColor:             $black;
 
 // Typography
-// -------------------------
+// ----------------------------------------------
 $sansFontFamily:        "Open Sans Condensed", Helvetica, Arial, sans-serif;
 $textFontFamily:        "BenchNine", Helvetica, Arial, sans-serif;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -47,69 +46,93 @@ $baseLineHeight:        20px;
 $altFontFamily:         $textFontFamily;
 
 $headingsFontFamily:    inherit; 
-$headingsFontWeight:    500;
-$headingsColor:         $gray;
-
+$headingsFontWeight:    normal;
+$headingsColor:         $pumpkin;
 
 @mixin setText($ratio:1) {
+	// $ratio = baseFontsize / newFontsize
+	h1 {
+	    // 81px/101.25 @ 16px
+	    font-size: (5.063 * $ratio) + 0em;
+	    // line-height: (101.25 * $ratio) + 0px; 
+	    margin-bottom: (0.357142857 * $ratio) + 0em;
+	}
+	h2 {
+	    // 54px/67.5px @ 16px
+	    font-size: (3.375 * $ratio) + 0em;
+	    line-height: (67.5 * $ratio) + 0px;
+	}
+	h3 {
+	    // 36px/45px @ 16px
+	    font-size: (2.25 * $ratio) + 0em;
+	    line-height: (45 * $ratio) + 0px;
+	}
+	h4 {
+	    // 24px/30px @ 16px
+	    font-size: (1.5 * $ratio) + 0em;
+	    line-height: (30 * $ratio) + 0px;
+	}
+
 	body, p,
 	.courselist,
 	.mask > blockquote,
-	.media-body > ul > li {
+	.mask-list > li {
 		font-size: ($baseFontSize * $ratio) + 0px;
 	 	line-height: ($baseLineHeight * $ratio) + 0px;
 	}
 }
-@mixin setHeaderWrap($ratio:1) {
-	#headerwrap {
+@mixin setpicturewrap($ratio:1) {
+	// $ratio = 37.5/newMinHeight for picturewrap 
+	.picturewrap {
 		min-height: 37.5 / $ratio + 0em;
 		margin-top: 2.5 / $ratio + 0em;
 		padding-top:8.75 / $ratio + 0em;
-		h1 {
-			font-size:4.375 / $ratio + 0em;
-			line-height: 40 / $ratio + 0px;
-		}
-	}
-	#welcomewrap {
-		h2 {
-			font-size:1.875 / $ratio +0em;
-		}
 	}
 }
 
+// Font Size 14
 @media (min-width: 696px) and (max-width: 1280px) {
 	@include setText(0.875);
 }
-@media (max-width: 695px) {
+// Font Size 12
+@media (min-width: 241px) and (max-width: 695px) {
 	@include setText(0.75);
 }
+// Font Size 10
+@media (max-width: 240px) {
+	@include setText(0.625);
+}
+
 
 // For all tablet orientations
-
+// ------------------------------------------------
 // Nexus 7 landscape
-@media (max-width: 1280px) {
-	@include setHeaderWrap(1.630434782);
-}
+// @media (max-width: 1280px) {
+// 	@include setpicturewrap(1.630434782);
+// }
 // iPad landscape
-@media (max-width: 1024px) {
-	@include setHeaderWrap(1.97368421);
-}
+// @media (max-width: 1024px) {
+// 	@include setpicturewrap(1.97368421);
+// }
 // tablet portrait
-@media (max-width: 979px) {
-	@include setHeaderWrap(0.79787234);
-	.navbar-fixed-top {
-		margin-bottom:0;
-	}
-	#headerwrap {
-		margin-top:0;
-	}
-}
-@media (max-width: 767px) {
-	@include setHeaderWrap(1.25);
-	.navbar-fixed-top {
-		margin-bottom:0;
-	}
-	#headerwrap {
-		margin-top:0;
-	}
-}
+// @media (max-width: 979px) {
+// 	@include setpicturewrap(0.79787234);
+// 	.navbar-fixed-top {
+// 		margin-bottom:0;
+// 	}
+// 	.picturewrap {
+// 		margin-top:0;
+// 	}
+// }
+// @media (max-width: 767px) {
+// 	@include setpicturewrap(1.25);
+// 	.picturewrap {
+// 		margin-top:0;
+// 	}
+// }
+// @media (max-width: 240px) {
+// 	@include setpicturewrap(1.875);
+// 	.picturewrap {
+// 		margin-top:0;
+// 	}
+// }

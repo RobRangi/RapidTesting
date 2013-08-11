@@ -2,59 +2,65 @@
 <!--[if lt IE 7]>      <html data-ng-app="appRapid" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html data-ng-app="appRapid" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html data-ng-app="appRapid" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html data-ng-app="appRapid" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if gt IE 8]><!-->
+<html data-ng-app="appRapid" class="no-js">
+<!--<![endif]-->
 
-        <title>Rapid Testing &middot; Software Testing | Test Management | Test Training</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <meta name="description" content="Rapid Testing - Software Testing | Test Management | Test Training">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Testing &middot; Software Testing | Test Management | Test Training</title>
 
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/main-responsive.css">
+    <meta name="description" content="Rapid Testing - Software Testing | Test Management | Test Training">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="js/min/jquery-1.10.1.min.js"></script>
-        <script src="js/min/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-responsive.css">
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|family=Ubuntu:400' rel='stylesheet' type='text/css'>
-    </head>
+    <script src="js/min/jquery-1.10.1.min.js"></script>
+    <script src="js/min/modernizr.custom.js"></script>
 
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|family=BenchNine:300' rel='stylesheet' type='text/css'>
+</head>
 
-        <!-- Header
-        ================================================== -->
-        <div data-ng-include="'../htm/site-header.htm'"></div>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
-        <!-- Content View
-        ================================================== -->
-        <div data-ng-view=""></div>
+    <!-- Header
+    ================================================== -->
+    <div data-ng-include="'../htm/site-header.htm'"></div>
+    
+    <!-- Content View
+    ================================================== -->
+    <!-- <div data-ng-view="" 
+        data-ng-controller="menuController" 
+        data-ng-hide="location.path() == '/contact'"></div> -->
 
-        <!-- Footer
-        ================================================== -->
-        <div data-ng-include="'../htm/site-footer.htm'"></div>
+    <!-- Footer
+    ================================================== -->
+    <!-- <div data-ng-include="'../htm/view-contact.htm'"></div> -->
 
-        <!-- Scripts
-        ================================================== -->
-        <script src="js/plugins.js"></script>
+    <!-- Scripts
+    ================================================== -->
+    <script src="js/plugins.js"></script>
 
-        <!-- Angular -->
-        <script src="js/min/angular.min.js"></script>
-        <script src="js/min/ui-bootstrap-tpls-0.4.0.min.js"></script>
-        <script src="js/modelcontroller.js"></script>
+    <!-- Angular -->
+    <script src="js/min/angular.min.js"></script>
+    <script src="js/min/ui-bootstrap-tpls-0.4.0.min.js"></script>
+    <script src="js/modelcontroller.js"></script>
 
-        <!-- Google Analytics
+    <!-- Google Analytics
         <script>
             // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             // g.src='//www.google-analytics.com/ga.js';
             // s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>  -->
-    </body>
+</body>
+
 </html>
