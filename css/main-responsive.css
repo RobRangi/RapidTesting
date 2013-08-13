@@ -6,32 +6,8 @@
 * http://www.apache.org/licenses/LICENSE-2.0
 * Designed and built based on Twitter Bootstrap.
 */
-@media (min-width: 696px) and (max-width: 1280px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000354}}
-  h1 {
-    font-size: 4.43012em;
-    margin-bottom: 0.3125em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000360}}
-  h2 {
-    font-size: 2.95313em;
-    line-height: 59.0625px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000365}}
-  h3 {
-    font-size: 1.96875em;
-    line-height: 39.375px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
-  h4 {
-    font-size: 1.3125em;
-    line-height: 26.25px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000379}}
+@media (min-width: 768px) and (max-width: 940px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000357}}
   body, p,
   .courselist,
   .mask > blockquote,
@@ -39,33 +15,41 @@
     font-size: 14px;
     line-height: 17.5px;
   }
-}
-@media (min-width: 241px) and (max-width: 695px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000354}}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000361}}
   h1 {
-    font-size: 3.79725em;
-    margin-bottom: 0.26786em;
+    font-size: 70.875px;
+    line-height: 65.625px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000366}}
   h2 {
-    font-size: 2.53125em;
-    line-height: 50.625px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000365}}
-  h3 {
-    font-size: 1.6875em;
-    line-height: 33.75px;
+    font-size: 47.25px;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
-  h4 {
-    font-size: 1.125em;
-    line-height: 22.5px;
+  h3 {
+    font-size: 31.5px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000374}}
+  h4 {
+    font-size: 21px;
+    line-height: 17.5px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000381}}
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000384}}
+  .picturewrap {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000357}}
   body, p,
   .courselist,
   .mask > blockquote,
@@ -73,38 +57,78 @@
     font-size: 12px;
     line-height: 15px;
   }
-}
-@media (max-width: 240px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000354}}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000361}}
   h1 {
-    font-size: 3.16438em;
-    margin-bottom: 0.22321em;
+    font-size: 60.75px;
+    line-height: 56.25px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000366}}
   h2 {
-    font-size: 2.10938em;
-    line-height: 42.1875px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000365}}
-  h3 {
-    font-size: 1.40625em;
-    line-height: 28.125px;
+    font-size: 40.5px;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
-  h4 {
-    font-size: 0.9375em;
-    line-height: 18.75px;
+  h3 {
+    font-size: 27px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000374}}
+  h4 {
+    font-size: 18px;
+    line-height: 15px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000381}}
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000384}}
+  .picturewrap {
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000357}}
   body, p,
   .courselist,
   .mask > blockquote,
   .mask-list > li {
     font-size: 10px;
     line-height: 12.5px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000361}}
+  h1 {
+    font-size: 50.625px;
+    line-height: 46.875px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000366}}
+  h2 {
+    font-size: 33.75px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000370}}
+  h3 {
+    font-size: 22.5px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000374}}
+  h4 {
+    font-size: 15px;
+    line-height: 12.5px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000381}}
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Github\/Documents\/RapidTesting\/scss\/main-responsive\.scss}line{font-family:\0000384}}
+  .picturewrap {
+    margin-top: 0;
   }
 }

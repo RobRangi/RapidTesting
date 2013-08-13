@@ -3,20 +3,12 @@
     "col1header": "Introducing",
     "name": "Brian Osman",
     "title": "Principal Consultant",
-    "introtext": "We deliver training that is based on improving the way testers see, think, interact with others and with the system under test. This is one way to show our value-add as testers. We are community focused liaising with like-minded, free thinking testers and take the opportunity to present at conferences and SIGsT groups.",
+    "text": "We deliver training that is based on improving the way testers see, think, interact with others and with the system under test. This is one way to show our value-add as testers. We are community focused liaising with like-minded, free thinking testers and take the opportunity to present at conferences and SIGsT groups.",
     "col2header":"our values",
-    "values": [
+    "col2values": [
         { 
             "valuehead": "We are Sith Lords",
             "valuetext":"You may have hidden the plans in the escape pod but we will send a detachment down to retrieve them, and have our Commanders see to it personally. Therell be no one to stop us this time!"
-        },
-        { 
-            "valuehead": "We destroy Planets",
-            "valuetext":"Alderaan was a peaceful planet. It had no weapons. You cant possibly… we have traced the Rebel spies to her. Now she is my only link to finding their secret base."
-        },
-        { 
-            "valuehead": "We know the Force too!",
-            "valuetext":"Kid, Ive flown from one side of this galaxy to the other. Ive seen a lot of strange stuff, but Ive never seen anything to make me believe theres one all-powerful Force controlling everything. Theres no mystical energy field that controls my destiny. Its all a lot of simple tricks and nonsense."
         },
         { 
             "valuehead": "We celebrate our Victories",
@@ -26,5 +18,18 @@
             "valuehead": "Were looking for Droids",
             "valuetext":"We don’t need to see your identification … Those aren’t the droids we’re looking for … You can go about your business … Move along"
         }],
-    "col3header":"our activity"
+    "col3header":"Words of Wisdom",
+    "col3values": [
+        { 
+            "valuehead":"Sweeping the Leg",
+            "valuetext":"We have no problem with that."
+        },
+        { 
+            "valuehead":"Answer: Fear. Pain. Defeat.",
+            "valuetext":"Question: What does not exist in this Dojo?"
+        },
+        { 
+            "valuehead":"Strike First. Strike Hard. No Mercy.",
+            "valuetext":"We do not train to be merciful here. Mercy is for the weak. Here, in the streets, in competition: A man confronts you, he is the enemy. An enemy deserves no mercy."
+        }]
 }

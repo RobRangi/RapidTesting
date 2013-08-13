@@ -51,28 +51,6 @@ $headingsColor:         $pumpkin;
 
 @mixin setText($ratio:1) {
 	// $ratio = baseFontsize / newFontsize
-	h1 {
-	    // 81px/101.25 @ 16px
-	    font-size: (5.063 * $ratio) + 0em;
-	    // line-height: (101.25 * $ratio) + 0px; 
-	    margin-bottom: (0.357142857 * $ratio) + 0em;
-	}
-	h2 {
-	    // 54px/67.5px @ 16px
-	    font-size: (3.375 * $ratio) + 0em;
-	    line-height: (67.5 * $ratio) + 0px;
-	}
-	h3 {
-	    // 36px/45px @ 16px
-	    font-size: (2.25 * $ratio) + 0em;
-	    line-height: (45 * $ratio) + 0px;
-	}
-	h4 {
-	    // 24px/30px @ 16px
-	    font-size: (1.5 * $ratio) + 0em;
-	    line-height: (30 * $ratio) + 0px;
-	}
-
 	body, p,
 	.courselist,
 	.mask > blockquote,
@@ -80,59 +58,45 @@ $headingsColor:         $pumpkin;
 		font-size: ($baseFontSize * $ratio) + 0px;
 	 	line-height: ($baseLineHeight * $ratio) + 0px;
 	}
-}
-@mixin setpicturewrap($ratio:1) {
-	// $ratio = 37.5/newMinHeight for picturewrap 
-	.picturewrap {
-		min-height: 37.5 / $ratio + 0em;
-		margin-top: 2.5 / $ratio + 0em;
-		padding-top:8.75 / $ratio + 0em;
+	h1 {
+	    // 81px @ 16px
+	    font-size: (81 * $ratio) + 0px;
+	    line-height: (75 * $ratio) + 0px;
+	}
+	h2 {
+	    // 54px @ 16px
+	    font-size: (54 * $ratio) + 0px;
+	}
+	h3 {
+		// 36px @ 16px
+		font-size: (36 * $ratio) + 0px;
+	}
+	h4 {
+		// 24px @ 16px
+		font-size: (24 * $ratio) + 0px;
+		line-height: (20 * $ratio) + 0px;
 	}
 }
-
+@mixin removeMargins {
+	.navbar-fixed-top {
+		margin-bottom:0;
+	}
+	.picturewrap {
+		margin-top:0;
+	}	
+}
 // Font Size 14
-@media (min-width: 696px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 940px) {
 	@include setText(0.875);
+	@include removeMargins;
 }
 // Font Size 12
-@media (min-width: 241px) and (max-width: 695px) {
+@media (max-width: 767px) {
 	@include setText(0.75);
+	@include removeMargins;
 }
 // Font Size 10
-@media (max-width: 240px) {
+@media (max-width: 480px) {
 	@include setText(0.625);
+	@include removeMargins;
 }
-
-
-// For all tablet orientations
-// ------------------------------------------------
-// Nexus 7 landscape
-// @media (max-width: 1280px) {
-// 	@include setpicturewrap(1.630434782);
-// }
-// iPad landscape
-// @media (max-width: 1024px) {
-// 	@include setpicturewrap(1.97368421);
-// }
-// tablet portrait
-// @media (max-width: 979px) {
-// 	@include setpicturewrap(0.79787234);
-// 	.navbar-fixed-top {
-// 		margin-bottom:0;
-// 	}
-// 	.picturewrap {
-// 		margin-top:0;
-// 	}
-// }
-// @media (max-width: 767px) {
-// 	@include setpicturewrap(1.25);
-// 	.picturewrap {
-// 		margin-top:0;
-// 	}
-// }
-// @media (max-width: 240px) {
-// 	@include setpicturewrap(1.875);
-// 	.picturewrap {
-// 		margin-top:0;
-// 	}
-// }

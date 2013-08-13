@@ -1,13 +1,13 @@
-<section id="courseswrap" 
-    data-ng-controller="courseController">
+<section id="idCourses" 
+    data-ng-controller="cntlCourse">
     <div class="container">
         <h2 class="page-title" 
-            data-ng-bind="courseCntl.pagetitle"></h2>
-        <p>{{ courseCntl.pagelead1 }}{{ courseCntl.pagelead2 }}</p>
+            data-ng-bind="dataCourse.pagetitle"></h2>
+        <p>{{ dataCourse.pagelead1 }}{{ dataCourse.pagelead2 }}</p>
         <br>
         <div class="row">
             <div class="span4" 
-                data-ng-repeat="course in courseCntl.courses">
+                data-ng-repeat="course in dataCourse.courses">
                 <div class="mask">
                     <h4>{{ course.title }} ({{course.duration}})</h4>
                     <p data-ng-bind="course.content"></p>

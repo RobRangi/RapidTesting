@@ -1,4 +1,4 @@
-<section id="services" data-ng-controller="cntlHome">
+<section id="idHome" data-ng-controller="cntlHome">
 
     <div class="wrapPitch">
         <div class="container">
@@ -25,7 +25,7 @@
                     <p data-ng-bind="dataHome.commitment.text"></p>
                     <br>
                     <ul class="mask-list" data-ng-repeat="item in dataHome.commitment.list">
-                        <li data-ng-bind="item"></li>
+                        <li><p data-ng-bind="item"></p></li>
                     </ul>
                 </div>
             </div>
@@ -41,6 +41,30 @@
                         &quot;{{ quote.text }}&quot;
                         <small data-ng-bind="quote.cite"></small>
                     </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="idCourses" 
+    data-ng-controller="cntlCourse">
+    <div class="container">
+        <h2 class="page-title" 
+            data-ng-bind="dataCourse.pagetitle"></h2>
+        <p>{{ dataCourse.pagelead1 }}{{ dataCourse.pagelead2 }}</p>
+        <br>
+        <div class="row">
+            <div class="span4" 
+                data-ng-repeat="course in dataCourse.courses">
+                <div class="mask">
+                    <h4>{{ course.title }} ({{course.duration}})</h4>
+                    <p data-ng-bind="course.content"></p>
+                    <br>
+                    <ul class="mask-list" 
+                        data-ng-repeat="item in course.objectives">
+                        <li><p data-ng-bind="item"></p></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,45 +1,36 @@
-<section id="about" data-ng-controller="aboutController">
+<section id="idAbout" data-ng-controller="cntlAbout">
     <div class="container">
-        <h2 class="page-title" data-ng-bind="aboutCntl.pagetitle"></h2>
+        <h2 class="page-title" data-ng-bind="dataAbout.pagetitle"></h2>
         <div class="row-fluid">
             <div class="span4">
                 <div class="mask">
-                    <h3 data-ng-bind="aboutCntl.col1header"></h3>
+                    <h3 data-ng-bind="dataAbout.col1header"></h3>
                     <img src="../img/Brian.jpg" alt="">
-                    <h3 data-ng-bind="aboutCntl.name"></h3>
-                    <h4 data-ng-bind="aboutCntl.title"></h4>
-                    <p data-ng-bind="aboutCntl.introtext"></p>                    
+                    <h3 data-ng-bind="dataAbout.name"></h3>
+                    <h4 data-ng-bind="dataAbout.title"></h4>
+                    <p data-ng-bind="dataAbout.text"></p>                    
                 </div>
             </div>
 
-            <div class="span4">
+            <div class="span8">
                 <div class="mask">
-                    <h3 data-ng-bind="aboutCntl.col2header"></h3>
+                    <h3 data-ng-bind="dataAbout.col2header"></h3>
                     <ul class="mask-list">
-                        <li data-ng-repeat="item in aboutCntl.values">
+                        <li data-ng-repeat="item in dataAbout.col2values">
                             <h4 data-ng-bind="item.valuehead"></h4>
                             <p data-ng-bind="item.valuetext"></p>
                         </li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="span4">
                 <div class="mask">
-                    <h3 data-ng-bind="aboutCntl.col3header"></h3>
-                    <a class="twitter-timeline" href="https://twitter.com/bjosman" data-widget-id="366302596861923328"></a>
-                    <script>
-                        ! function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");
-                    </script>
+                    <h3 data-ng-bind="dataAbout.col3header"></h3>
+                    <ul class="mask-list">
+                        <li data-ng-repeat="item in dataAbout.col3values">
+                            <h4 data-ng-bind="item.valuehead"></h4>
+                            <p data-ng-bind="item.valuetext"></p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,5 +1,25 @@
-<section id="blogwrap">
+<section id="blogwrap" data-ng-controller="cntlBlog">
     <div class="container">
         <h2 class="page-title">Our Blog</h2>
+        <div class="row-fluid">
+            <div class="span8">
+                <div class="mask">
+                    <h3 data-ng-bind="dataBlog.title"></h3>
+                    <h4 data-ng-bind="dataBlog.publishedDate"></h3>
+                    <p data-ng-bind="dataBlog.contentSnippet"></p>                    
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="mask">
+                    <h3>Categories</h3>
+                    <ul class="mask-list">
+                        <li data-ng-repeat="item in cntlBlog.categories">
+                            <p data-ng-bind="item"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

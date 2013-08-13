@@ -10,7 +10,7 @@
 body {
   position: relative;
   color: black;
-  background-color: #95a5a6;
+  background-color: #7f8c8d;
   font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -26,68 +26,66 @@ h1, h2, h3, h4 {
 
 /* line 69, ../scss/main.scss */
 h1 {
-  font-size: 5.063em;
-  margin-bottom: 0.357142857em;
+  font-size: 81px;
+  line-height: 75px;
 }
 
 /* line 74, ../scss/main.scss */
 h2 {
-  font-size: 3.375em;
-  line-height: 67.5px;
+  font-size: 54px;
 }
 
-/* line 79, ../scss/main.scss */
+/* line 78, ../scss/main.scss */
 h3 {
-  font-size: 2.25em;
-  line-height: 45px;
+  font-size: 36px;
 }
 
-/* line 84, ../scss/main.scss */
+/* line 82, ../scss/main.scss */
 h4 {
-  font-size: 1.5em;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 20px;
 }
 
-/* line 89, ../scss/main.scss */
-p, .mask > blockquote, .mask-list > li {
+/* line 87, ../scss/main.scss */
+p, .mask > blockquote, .mask-list > li > p {
   font-family: "BenchNine", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
 }
 
-/* line 95, ../scss/main.scss */
+/* line 93, ../scss/main.scss */
 a {
   text-decoration: none;
 }
-/* line 97, ../scss/main.scss */
+/* line 95, ../scss/main.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 101, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 hr {
   margin: 1em 0;
   border-top: 1px dashed #cccccc;
   border-bottom: 1px dashed #999999;
 }
 
-/* line 109, ../scss/main.scss */
+/* line 107, ../scss/main.scss */
 .page-title {
-  margin: 1.5em 0.25em 0.5em;
+  margin: 1.5em 0.25em 0.25em;
   border-left: 0.25em #d35400 solid;
   padding-left: 0.25em;
   text-transform: uppercase;
 }
 
-/* line 118, ../scss/main.scss */
+/* line 116, ../scss/main.scss */
 .navbar-inverse .navbar-inner {
   text-transform: uppercase;
 }
 
-/* line 122, ../scss/main.scss */
+/* line 120, ../scss/main.scss */
 .picturewrap {
-  background: #95a5a6 url(../img/masthead.jpg) no-repeat center center fixed;
+  background: #7f8c8d url(../img/masthead.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -97,102 +95,122 @@ hr {
   margin-top: 2.5em;
   padding-top: 8.75em;
 }
-/* line 134, ../scss/main.scss */
+/* line 132, ../scss/main.scss */
 .picturewrap h1 {
   color: white;
 }
 
-/* line 138, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 .ctawrap {
-  padding: 1em 0;
-  margin-top: -3.25em;
+  padding: 0.5em 0;
+  margin-top: -3em;
   background: rgba(22, 22, 22, 0.5);
   color: white;
 }
-/* line 143, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .ctawrap a {
   color: #d35400;
 }
-/* line 145, ../scss/main.scss */
+/* line 143, ../scss/main.scss */
 .ctawrap a:hover {
   color: #666666;
 }
 
-/* line 153, ../scss/main.scss */
-#services {
+/* line 151, ../scss/main.scss */
+#idHome {
   background-color: #ecf0f1;
   padding: 2em 0;
 }
 
-/* line 158, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 .wrapPitch,
 .wrapCommitment {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+/* line 160, ../scss/main.scss */
+.media img {
+  padding: 0em 1em;
 }
 
 /* line 164, ../scss/main.scss */
-#courseswrap {
+.media-body {
+  padding: 0em 1em;
+}
+/* line 166, ../scss/main.scss */
+.media-body h3 {
+  line-height: 1.25em;
+}
+
+/* line 173, ../scss/main.scss */
+#idServices {
+  background-color: #ecf0f1;
+}
+
+/* line 179, ../scss/main.scss */
+#idCourses {
   display: block;
   background: #bdc3c7 url(../img/courses.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-bottom: 2em;
+  padding: 1em;
 }
-/* line 174, ../scss/main.scss */
-#courseswrap h2, #courseswrap h3, #courseswrap h4 {
+/* line 189, ../scss/main.scss */
+#idCourses h2, #idCourses h3, #idCourses h4 {
   color: white;
 }
-/* line 177, ../scss/main.scss */
-#courseswrap h2 {
+/* line 192, ../scss/main.scss */
+#idCourses h2 {
+  margin-top: 0.5em;
   border-left: 0.25em white solid;
 }
-/* line 181, ../scss/main.scss */
-#courseswrap h4 {
+/* line 196, ../scss/main.scss */
+#idCourses h4 {
   padding-bottom: 0.25em;
   border-bottom: 1px white solid;
 }
-/* line 185, ../scss/main.scss */
-#courseswrap .mask:hover {
+/* line 200, ../scss/main.scss */
+#idCourses .mask:hover {
   background-color: rgba(211, 84, 0, 0.7);
 }
 
-/* line 192, ../scss/main.scss */
-#about {
+/* line 207, ../scss/main.scss */
+#idAbout {
   background-color: #ecf0f1;
 }
 
-/* line 199, ../scss/main.scss */
+/* line 214, ../scss/main.scss */
 #mediawrap {
   display: block;
   background-color: #ecf0f1;
   padding-bottom: 2em;
 }
 
-/* line 206, ../scss/main.scss */
+/* line 221, ../scss/main.scss */
 #blogwrap {
   display: block;
   background-color: #ecf0f1;
   padding-bottom: 2em;
 }
 
-/* line 213, ../scss/main.scss */
+/* line 228, ../scss/main.scss */
 .contactwrap {
   width: 100%;
   color: white;
-  background-color: #95a5a6;
+  background-color: #7f8c8d;
 }
-/* line 218, ../scss/main.scss */
+/* line 233, ../scss/main.scss */
 .contactwrap .span4 {
   padding: 0 1em;
 }
-/* line 221, ../scss/main.scss */
+/* line 236, ../scss/main.scss */
 .contactwrap h2, .contactwrap h3, .contactwrap h4 {
   color: white;
 }
 
-/* line 225, ../scss/main.scss */
+/* line 240, ../scss/main.scss */
 .map {
   display: block;
   width: 100%;
@@ -200,13 +218,18 @@ hr {
 }
 
 /********** MASKS **********/
-/* line 232, ../scss/main.scss */
+/* line 247, ../scss/main.scss */
 .mask {
   display: block;
   padding: 1em;
   line-height: 1.25em;
 }
-/* line 236, ../scss/main.scss */
+/* line 251, ../scss/main.scss */
 .mask:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 258, ../scss/main.scss */
+.mask-list {
+  margin-bottom: 0.25em;
 }
